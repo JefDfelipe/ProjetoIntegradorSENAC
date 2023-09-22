@@ -2,25 +2,25 @@
 <html>
 <head>
     <title>Aproveita+ Login</title>
-    <link rel="stylesheet" href="C:\Users\thayna.silva\OneDrive - SENAC-SC\Área de Trabalho\aproveitamais/logincss.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="logo">
-        <img src="C:\Users\thayna.silva\OneDrive - SENAC-SC\Área de Trabalho\aproveitamais/logo.png" alt="Logo do site">
+        <img src="https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/logo.png" alt="Logo do site">
     </div>
-    <h3 class="nome">Aproveita+</h3>
 <div id="login" class="login-form-container">
     <header>LOGIN - SIGN UP</header>
     <fieldset>
     <div class="input-wrapper">
-        <input type="text" placeholder="seu@email.com" />
+        <input type="text" placeholder="CPF ou CNPJ" />
     </div>
     <div class="input-wrapper">
-        <input type="password" placeholder="senha" />
+        <input type="password" placeholder="Senha" />
     </div>
     <button id="acessar" type="button">Acessar</button>
     </fieldset>
 </div>
+
 <script>
     var vContinue = document.getElementById("acessar");
     var vLogin = document.getElementById("login");
@@ -41,5 +41,6 @@
         document.body.classList.remove('denied');
     });
 </script>
+
 </body>
 </html>
