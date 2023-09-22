@@ -1,4 +1,4 @@
-package com.jovemprogramador.models;
+package com.jovemprogramador.aproveitamais.models;
 
 import java.util.UUID;
 
