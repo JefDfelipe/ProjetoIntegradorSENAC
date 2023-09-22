@@ -1,4 +1,4 @@
-package com.jovemprogramador.aproveitamais.controller;
+package com.jovemprogramador.aproveitamais.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

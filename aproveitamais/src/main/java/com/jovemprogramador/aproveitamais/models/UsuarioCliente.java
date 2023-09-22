@@ -1,10 +1,8 @@
-package com.jovemprogramador.aproveitamais.models;
+package com.jovemprogramador.aproveitamais.Models;
 
 import java.util.Collection;
-
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

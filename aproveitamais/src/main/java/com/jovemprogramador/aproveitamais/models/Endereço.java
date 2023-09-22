@@ -1,7 +1,6 @@
-package com.jovemprogramador.models;
+package com.jovemprogramador.aproveitamais.Models;
 
 import java.util.UUID;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

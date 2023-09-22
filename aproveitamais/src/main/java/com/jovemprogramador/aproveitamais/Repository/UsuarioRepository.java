@@ -2,7 +2,7 @@ package com.jovemprogramador.aproveitamais.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.jovemprogramador.aproveitamais.models.PessoaJuridica;
+import com.jovemprogramador.aproveitamais.Models.PessoaJuridica;
 
 public interface UsuarioRepository extends JpaRepository<PessoaJuridica, String> {
     
