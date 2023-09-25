@@ -62,19 +62,20 @@ h1 {
 }
 
 .btn {
-    display: inline-block;
     background-color: #D13B75;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    display: inline-block;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Efeito de transição de cor de fundo */
 }
 
 .btn:hover {
-    background-color: #D13B75;
+    background-color: #9C2542; /* Cor de fundo ao passar o mouse (opcional) */
 }
+
 
 /* Estilos do rodapé */
 footer {
@@ -112,21 +113,6 @@ footer {
 .product p {
     font-size: 16px;
     margin-top: 10px;
-}
-
-.add-to-cart {
-    background-color: #D13B75;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.add-to-cart:hover {
-    background-color: #9C2542;
 }
 
 /* Estilos padrão para telas maiores */
