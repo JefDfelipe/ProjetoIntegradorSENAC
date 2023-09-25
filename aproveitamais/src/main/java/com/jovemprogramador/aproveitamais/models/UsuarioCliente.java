@@ -49,7 +49,7 @@ public class UsuarioCliente implements UserDetails {
 	@Column(nullable = false, unique = true)
 	private UUID codigoEndereço;
 
-//----------------------------------------------------------------------\\
+  //----------------------------------------------------------------------\\
 
 	public UUID getCodigoEndereço() {
 
@@ -100,7 +100,7 @@ public class UsuarioCliente implements UserDetails {
 
 	public void setCPF(long cPF) {
 
-		CPF = cPF;
+		this.CPF = cPF;
 
 	}
 
@@ -147,43 +147,43 @@ public class UsuarioCliente implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // TODO Auto-generated method stub
+            
         throw new UnsupportedOperationException("Unimplemented method 'getAuthorities'");
     }
 
     @Override
     public String getPassword() {
-        // TODO Auto-generated method stub
+            
         return this.getPassword();
     }
 
     @Override
     public String getUsername() {
-        // TODO Auto-generated method stub
+            
         return this.getUsername();
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        // TODO Auto-generated method stub
+            
         return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        // TODO Auto-generated method stub
+            
         return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        // TODO Auto-generated method stub
+          
         return true;
     }
 
     @Override
     public boolean isEnabled() {
-        // TODO Auto-generated method stub
+            
         return true;
     }
      
