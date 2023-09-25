@@ -12,8 +12,6 @@ import jakarta.validation.constraints.NotBlank;
 @Entity
 public class Endereço {
 	
-	private static final long serialVersionUID = 1L;
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID codigoEndereço;
