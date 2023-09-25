@@ -161,9 +161,7 @@ public class UsuarioCliente implements UserDetails {
     public String getUsername() {
             
         return this.getUsername();
-    }
-
-    @Override
+	}
     public boolean isAccountNonExpired() {
             
         return true;
