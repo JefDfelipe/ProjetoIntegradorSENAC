@@ -20,36 +20,31 @@
                         <!-- Barra de pesquisa -->
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Buscar produtos..." aria-label="Search">
-                            <button class="btn" type="submit">Buscar</button>
+                            <button class="add-to-cart" type="submit">Buscar</button>
                         </form>
                         </div>
                 </div>
                 <div class="icons ml-3">
                     <!-- Link para produtos favoritos -->
-                    <a href="#" class="btn btn-link"><i class="fas fa-heart"></i></a>
+                    <a href="/favoritos" class="btn btn-link"><i class="fas fa-heart"></i></a>
                     <!-- Link para minha conta -->
-                    <a href="#" class="btn btn-link"><i class="fas fa-user"></i></a>
+                    <a href="/minhaconta" class="btn btn-link"><i class="fas fa-user"></i></a>
                     <!-- Link para carrinho de compras -->
-                    <a href="#" class="btn btn-link"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="/carrinho" class="btn btn-link"><i class="fas fa-shopping-cart"></i></a>
                 </div>
             </div>
         </nav>
         
     </header>
-    <section class="product-menu">
-        <ul>
-            <li><a href="#">Alimentos</a></li>
-            <li><a href="#">Bebidas</a></li>
-            <li><a href="#">Roupas</a></li>
-            <li><a href="#">Móveis</a></li>
-            <li><a href="#">Brinquedos</a></li>
-        </ul>
+
     </section>
     <section class="featured-icons">
         <div class="icon">
             <i class="fas fa-gift"></i>
             <h3>Promoções</h3>
             <p>Confira nossas ofertas especiais.</p>
+            <a href="/alimentos" class="add-to-cart">Alimentos</a>
+            <a href="/bebidas" class="add-to-cart">Bebidas</a>
         </div>
         <div class="icon">
             <i class="fas fa-shopping-cart"></i>
@@ -63,7 +58,6 @@
         </div>
     </section>
 
-   
 
     <section class="main-content">
         <div class="container products-container">
