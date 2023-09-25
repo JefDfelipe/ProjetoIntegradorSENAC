@@ -1,15 +1,13 @@
 package com.jovemprogramador.aproveitamais.security;
 
 import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.security.core.userdetails.UserDetails;
-//import org.springframework.security.core.userdetails.UserDetailsService;
-//import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
-
 import com.jovemprogramador.aproveitamais.models.PessoaJuridica;
 import com.jovemprogramador.aproveitamais.repository.UsuarioRepository;
-
 import jakarta.transaction.Transactional;
 
 @Service
@@ -21,9 +19,8 @@ public class ImplementsUserDetailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
-        // TODO Auto-generated method stub
         
-        PessoaJuridica empresa = usuarioRepository.findByLogin(login);
+        PessoaJuridica empresa = usuarioRepository.findByLoginPJ(login);
 
         if(empresa == null){
             throw new UsernameNotFoundException("Usuario não Encontrado!!");
