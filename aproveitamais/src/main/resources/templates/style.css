@@ -62,20 +62,19 @@ h1 {
 }
 
 .btn {
-    display: inline-block;
-    background-color: #D13B75;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  background-color: #d13b75;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #D13B75;
+  background-color: #d13b75;
 }
-
 
 /* Estilos do rodapé */
 footer {
@@ -116,18 +115,18 @@ footer {
 }
 
 .add-to-cart {
-    background-color: #D13B75;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #d13b75;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .add-to-cart:hover {
-    background-color: #9C2542;
+  background-color: #9c2542;
 }
 
 /* Estilos padrão para telas maiores */
