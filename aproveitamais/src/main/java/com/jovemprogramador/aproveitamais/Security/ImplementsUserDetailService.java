@@ -4,13 +4,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-<<<<<<< HEAD
 import org.springframework.security.core.userdetails.UserDetailsService;
-=======
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
->>>>>>> 45319b08c57ae2ba6e51deb3299819f445adc56f
 import org.springframework.stereotype.Service;
 import com.jovemprogramador.aproveitamais.models.PessoaJuridica;
 import com.jovemprogramador.aproveitamais.repository.UsuarioRepository;
