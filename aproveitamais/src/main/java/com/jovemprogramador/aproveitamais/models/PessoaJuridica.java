@@ -48,36 +48,43 @@ public class PessoaJuridica implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        
         throw new UnsupportedOperationException("Unimplemented method 'getAuthorities'");
     }
 
     @Override
     public String getPassword() {
+        
         return this.senha;
     }
 
     @Override
     public String getUsername() {
+        
         return this.login;
     }
 
     @Override
     public boolean isAccountNonExpired() {
+        
         return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
+        
         return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
+        
         return true;    
     }
 
     @Override
     public boolean isEnabled() {
+        
         return true;
     }
 
