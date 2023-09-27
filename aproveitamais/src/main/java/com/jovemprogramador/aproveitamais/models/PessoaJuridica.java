@@ -41,6 +41,16 @@ public class PessoaJuridica implements UserDetails {
 	@Column(nullable = false, unique = true)
 	private UUID codigoEndereço;
 
+	@Column(nullable = true, unique = true)
+	private String inscricaoEstadual;
+
+	@Column(nullable = false, unique = false)
+	private String nomeFantasia;
+
+    @NotBlank
+	@Column(nullable = false, unique = true)
+	private String razaoSocial;
+
     public UUID getempresaId(){
         return empresaId;
     }
@@ -59,6 +69,30 @@ public class PessoaJuridica implements UserDetails {
 
     public long getCNPJ(){
         return CNPJ;
+    }
+
+    public String getInscricaoEstadual() {
+        return inscricaoEstadual;
+    }
+
+    public void setInscricaoEstadual(String inscricaoEstadual) {
+        this.inscricaoEstadual = inscricaoEstadual;
+    }
+
+    public String getNomeFantasia() {
+        return nomeFantasia;
+    }
+
+    public void setNomeFantasia(String nomeFantasia) {
+        this.nomeFantasia = nomeFantasia;
+    }
+
+    public String getRazaoSocial() {
+        return razaoSocial;
+    }
+
+    public void setRazaoSocial(String razaoSocial) {
+        this.razaoSocial = razaoSocial;
     }
 
     @Override
