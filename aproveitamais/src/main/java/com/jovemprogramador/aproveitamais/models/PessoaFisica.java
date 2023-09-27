@@ -144,7 +144,6 @@ public class PessoaFisica implements UserDetails {
 
 	}
 
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
             
@@ -162,6 +161,8 @@ public class PessoaFisica implements UserDetails {
             
         return this.getUsername();
 	}
+
+	@Override
     public boolean isAccountNonExpired() {
             
         return true;
