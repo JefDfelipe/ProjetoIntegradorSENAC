@@ -1,51 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aproveita+ Login</title>
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="../static/style/login.css">
 </head>
 
 <body>
-  <div class="logo">
-    <img
-      src="https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/logo.png"
-      alt="Logo do site">
-  </div>
-  <div id="login" class="login-form-container">
-    <header>LOGIN - SIGN UP</header>
-    <fieldset>
-      <div class="input-wrapper">
-        <input type="text" placeholder="CPF ou CNPJ" />
+  <div class="login-container">
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/logo.png" alt="Logo do site">
+    </div>
+    <div class="login-form">
+      <header>LOGIN</header>
+      <form>
+        <div class="input-wrapper">
+          <input type="text" placeholder="CPF ou CNPJ">
+        </div>
+        <div class="input-wrapper">
+          <input type="password" placeholder="Senha">
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+      <div class="signup-link">
+        <a href="/cadastro.html">Cadastre-se</a>
       </div>
-      <div class="input-wrapper">
-        <input type="password" placeholder="Senha" />
-      </div>
-      <button id="acessar" type="button">Acessar</button>
-    </fieldset>
+    </div>
   </div>
 
   <script>
-    var vContinue = document.getElementById("acessar");
-    var vLogin = document.getElementById("login");
-
-    vContinue.addEventListener("click", function () {
-      document.body.classList.add('denied');
-    }, false);
-
-    var pfx = ["webkit", "moz", "MS", "o", ""];
-    function PrefixedEvent(element, type, callback) {
-      for (var p = 0; p < pfx.length; p++) {
-        if (!pfx[p]) type = type.toLowerCase();
-        element.addEventListener(pfx[p] + type, callback, false);
-      }
-    }
-
-    PrefixedEvent(vLogin, "AnimationEnd", function () {
-      document.body.classList.remove('denied');
-    });
+    // Seu código JavaScript aqui, se necessário
   </script>
 
 </body>
-
 </html>

@@ -21,7 +21,7 @@ body {
 header {
   background-color: #0f6f85;
   color: #92c6d1;
-  padding: 10px 0;
+  padding: 0px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
 }
 
@@ -38,16 +38,28 @@ nav ul {
 
 /* Adiciona uma margem entre os ícones do cabeçalho */
 .icons {
-  margin-left: 15px;
+  order: 2; /* Altera a ordem para aparecer depois dos outros elementos */
+  margin-left: 20px; /* Aumenta a margem à esquerda */
 }
 
 .logo img {
   height: 80px;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px; /* Aumenta o espaçamento no cabeçalho */
+}
+
 nav ul li a {
   text-decoration: none;
   color: #92c6d1;
+}
+
+.custom-bg {
+  background-color: #0f6f85;
 }
 
 /* Estilos do conteúdo principal */
@@ -78,101 +90,10 @@ h1 {
 
 /* Estilos do rodapé */
 footer {
-  background-color: #0f6f85;
+  background-color: #0076a3;
   color: #92c6d1;
   text-align: center;
   padding: 10px 0;
-}
-
-/* Estilos para a seção de produtos */
-.products-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.product {
-  flex: 0 0 calc(50% - 10px);
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-}
-
-.product img {
-  max-width: 100%;
-}
-
-.product h2 {
-  font-size: 24px;
-  margin-top: 10px;
-}
-
-.product p {
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-.add-to-cart {
-  background-color: #d13b75;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.add-to-cart:hover {
-  background-color: #9c2542;
-}
-
-/* Estilos padrão para telas maiores */
-header {
-  background-color: #0f6f85;
-  color: #92c6d1;
-  padding: 10px 0;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-}
-
-.menu li {
-  margin: 0 20px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.featured-icons {
-  display: flex;
-  justify-content: space-around;
-  margin: 30px 0;
-}
-
-.icon {
-  text-align: center;
-}
-
-.product-menu ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.product-menu li {
-  margin: 10px;
-}
-/* Estilos para a seção de conteúdo principal */
-.main-content {
-  text-align: center;
-  padding: 100px 0;
 }
 
 /* Estilos para a seção de produtos */
@@ -213,11 +134,50 @@ header {
   border-radius: 5px;
   display: inline-block;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Efeito de transição de cor de fundo */
+  transition: background-color 0.3s ease;
 }
 
 .add-to-cart:hover {
-  background-color: #9c2542; /* Cor de fundo ao passar o mouse (opcional) */
+  background-color: #9c2542;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.featured-icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.icon {
+  text-align: center;
+}
+
+.product-menu ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-menu li {
+  margin: 10px;
+}
+
+.main-content {
+  text-align: center;
+  padding: 100px 0;
 }
 
 /* Estilos para a classe .navbar-expand */
@@ -302,6 +262,7 @@ header {
   }
 
   .icons {
+    order: 3; /* Altera a ordem para aparecer depois do menu */
     margin-left: 0;
     margin-top: 20px; /* Adiciona espaço entre o menu e os ícones */
   }
