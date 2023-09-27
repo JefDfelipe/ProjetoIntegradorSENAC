@@ -1,8 +1,8 @@
 /* Estilos Gerais */
 body {
   font-family: Arial, sans-serif;
-  background-color: #92c6d1;
-  color: #0f6f85;
+  background-color: #4DAED1;
+  color: #fff;
 }
 
 .container {
@@ -19,8 +19,8 @@ body {
 
 /* Estilos do header */
 header {
-  background-color: #0f6f85;
-  color: #92c6d1;
+  background-color: #4DAED1;
+  color: #fff;
   padding: 0px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
 }
@@ -55,11 +55,11 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #92c6d1;
+  color: #fff;
 }
 
 .custom-bg {
-  background-color: #0f6f85;
+  background-color: #4DAED1;
 }
 
 /* Estilos do conteúdo principal */
@@ -90,8 +90,8 @@ h1 {
 
 /* Estilos do rodapé */
 footer {
-  background-color: #0076a3;
-  color: #92c6d1;
+  background-color: #4DAED1;
+  color: #fff;
   text-align: center;
   padding: 10px 0;
 }
@@ -181,97 +181,103 @@ footer {
 }
 
 /* Estilos para a classe .navbar-expand */
-.navbar-expand {
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $next: breakpoint-next($breakpoint, $grid-breakpoints);
-    $infix: breakpoint-infix($next, $grid-breakpoints);
 
-    // stylelint-disable-next-line scss/selector-no-union-class-name
-    &#{$infix} {
-      @include media-breakpoint-up($next) {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
+/* Você pode definir seus pontos de interrupção de grade aqui */
+/* $grid-breakpoints: (sm: 576px, md: 768px, lg: 992px, xl: 1200px); */
 
-        .navbar-nav {
-          flex-direction: row;
-
-          .dropdown-menu {
-            position: absolute;
-          }
-
-          .nav-link {
-            padding-right: var(--#{$prefix}navbar-nav-link-padding-x);
-            padding-left: var(--#{$prefix}navbar-nav-link-padding-x);
-          }
-        }
-
-        .navbar-nav-scroll {
-          overflow: visible;
-        }
-
-        .navbar-collapse {
-          display: flex !important; // stylelint-disable-line declaration-no-important
-          flex-basis: auto;
-        }
-
-        .navbar-toggler {
-          display: none;
-        }
-
-        .offcanvas {
-          // stylelint-disable declaration-no-important
-          position: static;
-          z-index: auto;
-          flex-grow: 1;
-          width: auto !important;
-          height: auto !important;
-          visibility: visible !important;
-          background-color: transparent !important;
-          border: 0 !important;
-          transform: none !important;
-          @include box-shadow(none);
-          @include transition(none);
-          // stylelint-enable declaration-no-important
-
-          .offcanvas-header {
-            display: none;
-          }
-
-          .offcanvas-body {
-            display: flex;
-            flex-grow: 0;
-            padding: 0;
-            overflow-y: visible;
-          }
-        }
-      }
-    }
+/* Loop pelos pontos de interrupção */
+@media screen and (min-width: 576px) {
+  /* Defina estilos para este ponto de interrupção e maiores */
+  .sm {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .sm .navbar-nav {
+    flex-direction: row;
+  }
+  .sm .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+  .sm .navbar-nav .nav-link {
+    padding-right: var(--#{$prefix}navbar-nav-link-padding-x);
+    padding-left: var(--#{$prefix}navbar-nav-link-padding-x);
+  }
+  .sm .navbar-nav-scroll {
+    overflow: visible;
+  }
+  .sm .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .sm .navbar-toggler {
+    display: none;
+  }
+  .sm .offcanvas {
+    position: static;
+    z-index: auto;
+    flex-grow: 1;
+    width: auto !important;
+    height: auto !important;
+    visibility: visible !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    transform: none !important;
+  }
+  .sm .offcanvas .offcanvas-header {
+    display: none;
+  }
+  .sm .offcanvas .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible;
   }
 }
 
-/* Estilos para telas menores (máximo de 768px de largura) */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
+@media screen and (min-width: 768px) {
+  /* Defina estilos para este ponto de interrupção e maiores */
+  .md {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
-
-  .menu li {
-    margin: 10px 0;
-    font-size: 16px; /* Reduz o tamanho do texto do menu */
+  .md .navbar-nav {
+    flex-direction: row;
   }
-
-  .icons {
-    order: 3; /* Altera a ordem para aparecer depois do menu */
-    margin-left: 0;
-    margin-top: 20px; /* Adiciona espaço entre o menu e os ícones */
+  .md .navbar-nav .dropdown-menu {
+    position: absolute;
   }
-}
-
-/* Estilos para telas ainda menores (máximo de 480px de largura) */
-@media (max-width: 480px) {
-  .menu li {
-    margin: 5px 0; /* Adiciona margem entre os itens do menu */
-    font-size: 14px; /* Reduz ainda mais o tamanho do texto do menu */
+  .md .navbar-nav .nav-link {
+    padding-right: var(--#{$prefix}navbar-nav-link-padding-x);
+    padding-left: var(--#{$prefix}navbar-nav-link-padding-x);
+  }
+  .md .navbar-nav-scroll {
+    overflow: visible;
+  }
+  .md .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .md .navbar-toggler {
+    display: none;
+  }
+  .md .offcanvas {
+    position: static;
+    z-index: auto;
+    flex-grow: 1;
+    width: auto !important;
+    height: auto !important;
+    visibility: visible !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    transform: none !important;
+  }
+  .md .offcanvas .offcanvas-header {
+    display: none;
+  }
+  .md .offcanvas .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible;
   }
 }
