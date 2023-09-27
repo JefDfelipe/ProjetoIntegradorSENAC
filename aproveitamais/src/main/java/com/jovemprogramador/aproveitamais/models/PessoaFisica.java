@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotBlank;
 
 
 @Entity
-public class UsuarioCliente implements UserDetails {
+public class PessoaFisica implements UserDetails {
 
 
     private static final long serialVersionUID = 1L;
@@ -144,7 +144,6 @@ public class UsuarioCliente implements UserDetails {
 
 	}
 
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
             
@@ -162,6 +161,8 @@ public class UsuarioCliente implements UserDetails {
             
         return this.getUsername();
 	}
+
+	@Override
     public boolean isAccountNonExpired() {
             
         return true;
