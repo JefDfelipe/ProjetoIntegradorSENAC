@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aproveita+ Cadastro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="../static/style/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -21,50 +23,42 @@
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto mr-auto">
+        <d class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Produtos
-              </a>
+                aria-haspopup="true" aria-expanded="false">Produtos</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="/alimentos">Alimentos</a>
                 <a class="dropdown-item" href="/bebidas">Bebidas</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/quemsomos">Quem Somos</a>
-            </li>
           </ul>
-          <div class="search-bar">
             <!-- Barra de pesquisa -->
-            <form class="form-inline">
+            <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Buscar produtos..." aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+              <button class="btn btn-buscar-home my-2 my-sm-0" id="buscarButton" type="submit">Buscar</button>
             </form>
-            <ul class="navbar-nav ml-auto icons">
+            <ul class="navbar-nav icons">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="minhaContaDropdown" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="minhaContaDropdown">
+                    <a class="dropdown-item" href="/login.html">Login</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/cadastro.html">Cadastre-se</a>
+                  </div>
+            </li>
               <li class="nav-item">
-                <a class="nav-link" href="/favoritos"><i class="fas fa-heart"></i> Favoritos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/minhaconta"><i class="fas fa-user"></i> Minha Conta</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/carrinho"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+                <a class="nav-link" href="/carrinho"><i class="fas fa-shopping-cart"></i></a>
               </li>
             </ul>
-          </div>
         </div>
       </div>
     </nav>
   </header>
-
-  <div class="logo">
-    <img
-      src="https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/logo.png"
-      alt="Logo do site">
-  </div>
 
   <div class="container">
     <form class="registration-form">
@@ -174,6 +168,16 @@
         <button type="submit" class="submit-button">Cadastrar</button>
     </form>
   </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Aproveita+. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <script>
     // Função para mostrar campos de CPF e ocultar campos de CNPJ
