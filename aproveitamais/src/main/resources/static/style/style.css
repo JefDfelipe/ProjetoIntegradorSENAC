@@ -35,22 +35,6 @@ header {
   border-radius: 5px 5px 0 0;
 }
 
-.btn-buscar-home {
-  width: 25%;
-  background-color: #D1627B;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: 30px;
-}
-
-.btn-buscar-home:hover {
-  background-color: #d13b75;
-}
-
 button[type="submit"] {
   width: 100%;
   background-color: #D1627B;
@@ -63,6 +47,22 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
+  background-color: #d13b75;
+}
+
+.btn-buscar-home {
+  width: 25%;
+  background-color: #D1627B;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 1px;
+}
+
+.btn-buscar-home:hover {
   background-color: #d13b75;
 }
 
@@ -79,17 +79,17 @@ nav ul {
 
 /* Adiciona uma margem entre os ícones do cabeçalho */
 .icons {
-  order: 2; /* Altera a ordem para aparecer depois dos outros elementos */
-  margin-left: 50px; /* Aumenta a margem à esquerda */
+  order: 3; /* Altera a ordem para aparecer depois dos outros elementos */
+  margin-left: 80px; /* Aumenta a margem à esquerda */
 }
 .navbar-nav.icons {
-  margin-top: 10px; /* Altere o valor conforme necessário */
+  margin-top: 70px; /* Altere o valor conforme necessário */
 }
 
 .logo img {
   height: 80px;
   text-align: center;
-  margin-right: 50px;
+  margin-right: 20px;
   margin-bottom: 20px;
 }
 
@@ -281,8 +281,13 @@ footer {
   padding: 100px 0;
 }
 
-form {
-  padding: 30px 0;
+.form-inline .form-control {
+  flex: 1; /* Ocupa o espaço disponível restante */
+  margin-right: 5px; /* Espaço entre o campo de pesquisa e o botão */
+}
+
+.form-inline .btn-buscar-home {
+  flex: 0; /* Não cresce, tamanho fixo */
 }
 
 /* Estilos para a classe .navbar-expand */
