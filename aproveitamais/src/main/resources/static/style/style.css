@@ -17,12 +17,54 @@ body {
   box-sizing: border-box;
 }
 
+.box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+}
+
 /* Estilos do header */
 header {
   background-color: #4DAED1;
   color: #fff;
-  padding: 0px 0;
+  padding: 1px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #D1627B;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #d13b75;
+}
+
+.btn-buscar-home {
+  width: 25%;
+  background-color: #D1627B;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 1px;
+}
+
+.btn-buscar-home:hover {
+  background-color: #d13b75;
 }
 
 nav ul {
@@ -38,12 +80,18 @@ nav ul {
 
 /* Adiciona uma margem entre os ícones do cabeçalho */
 .icons {
-  order: 2; /* Altera a ordem para aparecer depois dos outros elementos */
-  margin-left: 20px; /* Aumenta a margem à esquerda */
+  order: 3; /* Altera a ordem para aparecer depois dos outros elementos */
+  margin-left: 80px; /* Aumenta a margem à esquerda */
+}
+.navbar-nav.icons {
+  margin-top: 70px; /* Altere o valor conforme necessário */
 }
 
 .logo img {
   height: 80px;
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .navbar {
@@ -51,6 +99,20 @@ nav ul {
   justify-content: space-between;
   align-items: center;
   padding: 0px 0px; /* Aumenta o espaçamento no cabeçalho */
+}
+
+.navbar-nav {
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.navbar-nav li {
+  margin: 0 15px; /* Ajuste a margem entre os itens do menu principal */
+}
+
+.navbar-nav.icons {
+  margin-top: 10px; /* Altere o valor conforme necessário */
 }
 
 nav ul li a {
@@ -71,21 +133,55 @@ nav ul li a {
 h1 {
   font-size: 36px;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #d13b75;
-  color: #fff;
-  padding: 10px 20px;
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-link a {
   text-decoration: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  color: #0f6f85;
+  font-weight: bold;
 }
 
-.btn:hover {
-  background-color: #d13b75;
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para os campos de entrada */
+.form-group label {
+  margin-bottom: 8px;
+}
+
+.form-group label input[type="checkbox"] {
+  margin-left: 5px; /* Adicione uma margem à esquerda da caixa de seleção */
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.box h3 {
+  background-color: #0f6f85;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  margin-top: 0;
 }
 
 /* Estilos do rodapé */
@@ -94,47 +190,58 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
-}
+  width: 100%;
+ }
 
 /* Estilos para a seção de produtos */
 .products-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px; /* Espaço entre os produtos */
 }
 
 .product {
-  flex: 0 0 calc(50% - 10px); /* Divide a largura em 2 colunas com espaço entre elas */
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
   text-align: center;
-  margin-bottom: 20px; /* Espaço entre os produtos */
-  padding: 20px; /* Espaço interno dos produtos */
-  border: 1px solid #ccc; /* Borda ao redor dos produtos (opcional) */
 }
 
 .product img {
   max-width: 100%; /* Imagens ajustáveis ao tamanho do contêiner */
 }
 
-.product h2 {
-  font-size: 24px;
-  margin-top: 10px; /* Espaço entre o título e a descrição */
+.product-title {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-.product p {
+.product-details {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #888; /* Cor de detalhes mais suaves */
+}
+
+.product-expiry {
   font-size: 16px;
-  margin-top: 10px; /* Espaço entre a descrição e o botão */
+  margin-top: 10px;
+  color: #888; /* Cor de detalhes mais suaves */
 }
 
 .add-to-cart {
   background-color: #d13b75;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 5px;
   text-decoration: none;
+  border: none;
   border-radius: 5px;
   display: inline-block;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
 .add-to-cart:hover {
@@ -176,8 +283,18 @@ footer {
 }
 
 .main-content {
+  margin-top: 10px;
   text-align: center;
-  padding: 100px 0;
+  padding: 1px 0;
+}
+
+.form-inline .form-control {
+  flex: 1; /* Ocupa o espaço disponível restante */
+  margin-right: 5px; /* Espaço entre o campo de pesquisa e o botão */
+}
+
+.form-inline .btn-buscar-home {
+  flex: 0; /* Não cresce, tamanho fixo */
 }
 
 /* Estilos para a classe .navbar-expand */
@@ -279,5 +396,29 @@ footer {
     flex-grow: 0;
     padding: 0;
     overflow-y: visible;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu li {
+    margin: 5px 0; /* Adiciona margem entre os itens do menu */
+    font-size: 14px; /* Reduz ainda mais o tamanho do texto do menu */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: 10px 0;
+    font-size: 16px; /* Reduz o tamanho do texto do menu */
+  }
+
+  .icons {
+    margin-left: 0;
+    margin-top: 20px; /* Adiciona espaço entre o menu e os ícones */
   }
 }
