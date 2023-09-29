@@ -39,8 +39,8 @@ public class Endereco {
 		return CEP;
 	}
 
-	public void setCEP(long cEP) {
-		CEP = cEP;
+	public void setCEP(long CEP) {
+		this.CEP = CEP;
 	}
 
 	public String getNúmero() {
