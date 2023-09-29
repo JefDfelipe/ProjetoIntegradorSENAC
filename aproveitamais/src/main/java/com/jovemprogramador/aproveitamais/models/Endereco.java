@@ -9,13 +9,13 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-public class Endereço {
+public class Endereco {
 	
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private UUID codigoEndereço;
+	private UUID codigoEndereco;
 	
 	@NotBlank
 	@Column(nullable = false, unique = false)
@@ -28,11 +28,11 @@ public class Endereço {
 	private String complemento;
 
 	public UUID getCodigoEndereço() {
-		return codigoEndereço;
+		return codigoEndereco;
 	}
 
 	public void setCodigoEndereço(UUID codigoEndereço) {
-		this.codigoEndereço = codigoEndereço;
+		this.codigoEndereco = codigoEndereço;
 	}
 
 	public long getCEP() {
