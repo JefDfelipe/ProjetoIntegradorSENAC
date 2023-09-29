@@ -1,20 +1,26 @@
+/* Reset de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Estilos Gerais */
 body {
   font-family: Arial, sans-serif;
-  background-color: #4DAED1;
+  background-color: #4daed1;
   color: #fff;
+  min-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-width: 100%;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-}
-/* Reset de estilos básicos */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 .box {
@@ -28,17 +34,18 @@ body {
 
 /* Estilos do header */
 header {
-  background-color: #4DAED1;
+  background-color: #4daed1;
   color: #fff;
   padding: 1px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
   text-align: center;
   border-radius: 5px 5px 0 0;
+  min-height: 10vh;
 }
 
 button[type="submit"] {
   width: 100%;
-  background-color: #D1627B;
+  background-color: #d1627b;
   color: #fff;
   padding: 10px;
   border: none;
@@ -53,7 +60,7 @@ button[type="submit"]:hover {
 
 .btn-buscar-home {
   width: 25%;
-  background-color: #D1627B;
+  background-color: #d1627b;
   color: #fff;
   padding: 10px;
   border: none;
@@ -83,6 +90,7 @@ nav ul {
   order: 3; /* Altera a ordem para aparecer depois dos outros elementos */
   margin-left: 80px; /* Aumenta a margem à esquerda */
 }
+
 .navbar-nav.icons {
   margin-top: 70px; /* Altere o valor conforme necessário */
 }
@@ -121,7 +129,7 @@ nav ul li a {
 }
 
 .custom-bg {
-  background-color: #4DAED1;
+  background-color: #4daed1;
 }
 
 /* Estilos do conteúdo principal */
@@ -186,12 +194,19 @@ h1 {
 
 /* Estilos do rodapé */
 footer {
-  background-color: #4DAED1;
+  background-color: #4daed1;
   color: #fff;
   text-align: center;
-  padding: 10px 0;
+  padding-top: 5px;
   width: 100%;
- }
+  min-height: 5vh;
+  max-height: 11vh;
+
+  /* fixa o footer na base da pagina */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 
 /* Estilos para a seção de produtos */
 .products-container {
