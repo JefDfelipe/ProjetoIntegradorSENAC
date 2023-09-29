@@ -297,24 +297,48 @@ footer {
   flex: 0; /* Não cresce, tamanho fixo */
 }
 
-#carouselExampleSlidesOnly {
-  width: 100%; /* Defina a largura desejada */
-  max-width: 800px; /* Largura máxima, se desejar */
-  height: auto; /* Defina a altura desejada ou use 'auto' para manter a proporção original */
+#myCarousel {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto; /* Centraliza o carousel horizontalmente */
 }
 
-.carousel-control-prev, .carousel-control-next {
-  color: #fff; /* Cor desejada */
+#myCarousel .carousel-inner img {
+  width: 50%;
+  height: auto;
 }
 
-/* Altere o tamanho das setas */
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  width: 30px; /* Largura desejada */
-  height: 30px; /* Altura desejada */
+.carousel-control-prev,
+.carousel-control-next {
+  color: #fff;
+  font-size: 30px; /* Tamanho das setas */
+  background: none; /* Remove o fundo das setas */
 }
 
 .carousel-inner .carousel-item {
-  transition-duration: 1s; /* Tempo de transição em segundos */
+  transition-duration: 1s;
+}
+
+/* Estilize os indicadores de slides (pontos) */
+.carousel-indicators {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.carousel-indicators li {
+  background-color: #fff; /* Cor dos pontos */
+  border: 2px solid #007BFF; /* Cor da borda dos pontos */
+  border-radius: 50%; /* Deixa os pontos redondos */
+  width: 12px; /* Tamanho dos pontos */
+  height: 12px;
+  margin: 0 6px; /* Espaçamento entre os pontos */
+  cursor: pointer;
+}
+
+.carousel-indicators .active {
+  background-color: #007BFF; /* Cor do ponto ativo */
+  border: 2px solid #fff; /* Cor da borda do ponto ativo */
 }
 
 /* Estilos para a classe .navbar-expand */
