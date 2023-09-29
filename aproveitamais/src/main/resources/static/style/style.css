@@ -297,6 +297,26 @@ footer {
   flex: 0; /* Não cresce, tamanho fixo */
 }
 
+#carouselExampleSlidesOnly {
+  width: 100%; /* Defina a largura desejada */
+  max-width: 800px; /* Largura máxima, se desejar */
+  height: auto; /* Defina a altura desejada ou use 'auto' para manter a proporção original */
+}
+
+.carousel-control-prev, .carousel-control-next {
+  color: #fff; /* Cor desejada */
+}
+
+/* Altere o tamanho das setas */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 30px; /* Largura desejada */
+  height: 30px; /* Altura desejada */
+}
+
+.carousel-inner .carousel-item {
+  transition-duration: 1s; /* Tempo de transição em segundos */
+}
+
 /* Estilos para a classe .navbar-expand */
 
 /* Você pode definir seus pontos de interrupção de grade aqui */
