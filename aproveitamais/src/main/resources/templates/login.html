@@ -5,34 +5,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aproveita+ Login</title>
-  <link rel="stylesheet" href="../static/style/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="../static/style/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
-  <div class="login-container">
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/logo.png" alt="Logo do site">
-    </div>
-    <div class="login-form">
-      <header>LOGIN</header>
-      <form>
-        <div class="input-wrapper">
-          <input type="text" placeholder="CPF ou CNPJ">
+  <div>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light custom-bg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/logo.png"
+              alt="Aproveita+" class="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Produtos</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/alimentos">Alimentos</a>
+                  <a class="dropdown-item" href="/bebidas">Bebidas</a>
+                </div>
+              </li>
+            </ul>
+              <!-- Barra de pesquisa -->
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar produtos..." aria-label="Search">
+                <button class="btn btn-buscar-home my-2 my-sm-0" id="buscarButton" type="submit">Buscar</button>
+              </form>
+              <ul class="navbar-nav icons">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="minhaContaDropdown" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-user"></i>
+                   </a>
+                    <div class="dropdown-menu" aria-labelledby="minhaContaDropdown">
+                      <a class="dropdown-item" href="/login.html">Login</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="/cadastro.html">Cadastre-se</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/carrinho"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+              </ul>
+          </div>
         </div>
-        <div class="input-wrapper">
-          <input type="password" placeholder="Senha">
-        </div>
-        <button type="submit">Entrar</button>
+      </nav>
+    </header>
+    <div class="container">
+     <form class="registration-form">
+        <h2>Login</h2>
+          <div class="box">
+            <h3>Entrar com CPF ou CNPJ e senha:</h3>
+            <div class="form-group">
+            <input type="text" placeholder="CPF ou CNPJ"required>
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Senha"required>
+          </div>
+          <button type="submit">Entrar</button>
       </form>
-      <div class="signup-link">
-        <a href="http://127.0.0.1:5500/aproveitamais/src/main/resources/templates/cadastro.html">Cadastre-se</a>
+        <div class="signup-link">
+          <a href="http://127.0.0.1:5500/aproveitamais/src/main/resources/templates/cadastro.html">Não tem uma conta? Cadastre-se</a>
+        </div>
+        </div>
       </div>
     </div>
   </div>
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Aproveita+. Todos os direitos reservados.</p>
+      </div>
+    </footer>
 
-  <script>
-    // Seu código JavaScript aqui, se necessário
-  </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
