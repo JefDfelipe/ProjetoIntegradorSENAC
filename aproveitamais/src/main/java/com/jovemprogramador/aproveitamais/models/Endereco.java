@@ -40,7 +40,7 @@ public class Endereco {
 	}
 
 	public void setCEP(long CEP) {
-		CEP = CEP;
+		this.CEP = CEP;
 	}
 
 	public String getNúmero() {

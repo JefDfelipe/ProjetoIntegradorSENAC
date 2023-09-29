@@ -37,6 +37,12 @@ public class Produtos {
     @Column(nullable = false, unique = false)
     private String mercadoDeOrigem;
 
+    @NotBlank
+    @Column(nullable = false, unique = false)
+    private float preco;
+
+
+    
   //----------------------------------------------------------------------\\
 
     public UUID getprodutoId() {
