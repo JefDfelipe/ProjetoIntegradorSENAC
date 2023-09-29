@@ -133,6 +133,7 @@ nav ul li a {
 h1 {
   font-size: 36px;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .signup-link {
@@ -194,43 +195,53 @@ footer {
 
 /* Estilos para a seção de produtos */
 .products-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px; /* Espaço entre os produtos */
 }
 
 .product {
-  flex: 0 0 calc(50% - 10px); /* Divide a largura em 2 colunas com espaço entre elas */
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
   text-align: center;
-  margin-bottom: 20px; /* Espaço entre os produtos */
-  padding: 20px; /* Espaço interno dos produtos */
-  border: 1px solid #ccc; /* Borda ao redor dos produtos (opcional) */
 }
 
 .product img {
   max-width: 100%; /* Imagens ajustáveis ao tamanho do contêiner */
 }
 
-.product h2 {
-  font-size: 24px;
-  margin-top: 10px; /* Espaço entre o título e a descrição */
+.product-title {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-.product p {
+.product-details {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #888; /* Cor de detalhes mais suaves */
+}
+
+.product-expiry {
   font-size: 16px;
-  margin-top: 10px; /* Espaço entre a descrição e o botão */
+  margin-top: 10px;
+  color: #888; /* Cor de detalhes mais suaves */
 }
 
 .add-to-cart {
   background-color: #d13b75;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 5px;
   text-decoration: none;
+  border: none;
   border-radius: 5px;
   display: inline-block;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
 .add-to-cart:hover {
@@ -272,8 +283,9 @@ footer {
 }
 
 .main-content {
+  margin-top: 10px;
   text-align: center;
-  padding: 100px 0;
+  padding: 1px 0;
 }
 
 .form-inline .form-control {
