@@ -25,8 +25,8 @@ public class appController {
 	private PessoaJuridicaRepository pj;
 	private ProdutosRepository pr;
 
-    @RequestMapping(value = "/cadastro", method = RequestMethod.GET)
-		public String form(@Valid PessoaFisica pessoaFisica, BindingResult result, 
+    @RequestMapping(value = "/cadastro", method = RequestMethod.POST)
+		public String formPF(@Valid PessoaFisica pessoaFisica, BindingResult result, 
 				RedirectAttributes attributes) {
 			
 			if(result.hasErrors()) {
@@ -39,7 +39,7 @@ public class appController {
 		}
 
 		@RequestMapping(value = "/cadastro", method = RequestMethod.POST)
-		public String form(@Valid PessoaJuridica pessoaJuridica, BindingResult result, 
+		public String formPJ(@Valid PessoaJuridica pessoaJuridica, BindingResult result, 
 				RedirectAttributes attributes) {
 			
 			if(result.hasErrors()) {
