@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-public class Energeticos extends Bebidas {
+public class Refrigerante extends Bebidas {
     
 
     private static final long serialVersionUID = 1L;
@@ -18,12 +18,10 @@ public class Energeticos extends Bebidas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID energeticoId;
+    private UUID refrigeranteId;
     
     @NotBlank
     @Column(nullable = false, unique = true)
-    private String nome;
-
-
+    private String itens;
 
 }
