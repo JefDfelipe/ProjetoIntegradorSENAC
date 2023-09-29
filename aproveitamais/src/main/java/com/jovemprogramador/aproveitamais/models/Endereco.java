@@ -39,7 +39,7 @@ public class Endereco {
 		return CEP;
 	}
 
-	public void setCEP(long cEP) {
+	public void setCEP(long CEP) {
 		CEP = cEP;
 	}
 
