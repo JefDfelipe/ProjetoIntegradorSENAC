@@ -199,13 +199,6 @@ footer {
   text-align: center;
   padding-top: 5px;
   width: 100%;
-  min-height: 5vh;
-  max-height: 11vh;
-
-  /* fixa o footer na base da pagina */
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 /* Estilos para a seção de produtos */
