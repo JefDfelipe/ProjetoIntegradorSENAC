@@ -26,5 +26,37 @@ public class Endereço {
 	
 	@Column(nullable = true, unique = false)
 	private String complemento;
-	
+
+	public UUID getCodigoEndereço() {
+		return codigoEndereço;
+	}
+
+	public void setCodigoEndereço(UUID codigoEndereço) {
+		this.codigoEndereço = codigoEndereço;
+	}
+
+	public long getCEP() {
+		return CEP;
+	}
+
+	public void setCEP(long cEP) {
+		CEP = cEP;
+	}
+
+	public String getNúmero() {
+		return número;
+	}
+
+	public void setNúmero(String número) {
+		this.número = número;
+	}
+
+	public String getComplemento() {
+		return complemento;
+	}
+
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+
 }
