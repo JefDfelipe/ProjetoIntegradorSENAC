@@ -146,7 +146,7 @@ h1 {
 
 .signup-link {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .signup-link a {
@@ -209,9 +209,19 @@ footer {
 .content-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100vh - 200px);
 }
 
+/* Estilos especificos página de login */
+.login-page .box {
+  width: 100%; /* Defina a largura desejada para a página de login */
+  max-width: 900px; /* Defina o máximo de largura desejado */
+  margin: 0 auto; /* Centralize horizontalmente */
+  padding: 40px; /* Aumente o preenchimento vertical */
+}
+.login-title {
+  margin-left: 105px;
+}
 /* Estilos para a seção de produtos */
 .products-container {
   display: grid;
