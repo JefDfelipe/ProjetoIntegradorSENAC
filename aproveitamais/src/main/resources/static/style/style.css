@@ -198,7 +198,7 @@ footer {
   color: #fff;
   text-align: center;
 
-/* Footer mais responsivo */
+  /* Footer mais responsivo */
   padding: 10px 0;
   width: 100%; /* Ocupa todo o espaço disponível */
   box-sizing: border-box;
@@ -357,7 +357,7 @@ footer {
 
 .carousel-indicators li {
   background-color: #fff; /* Cor dos pontos */
-  border: 2px solid #007BFF; /* Cor da borda dos pontos */
+  border: 2px solid #007bff; /* Cor da borda dos pontos */
   border-radius: 50%; /* Deixa os pontos redondos */
   width: 12px; /* Tamanho dos pontos */
   height: 12px;
@@ -366,7 +366,7 @@ footer {
 }
 
 .carousel-indicators .active {
-  background-color: #007BFF; /* Cor do ponto ativo */
+  background-color: #007bff; /* Cor do ponto ativo */
   border: 2px solid #fff; /* Cor da borda do ponto ativo */
 }
 
@@ -388,10 +388,24 @@ footer {
   .sm .navbar-nav .dropdown-menu {
     position: absolute;
   }
-  .sm .navbar-nav .nav-link {
-    padding-right: var(--#{$prefix}navbar-nav-link-padding-x);
-    padding-left: var(--#{$prefix}navbar-nav-link-padding-x);
+
+  /* variável customizada para CSS */
+  :root {
+    --example-prefix-navbar-nav-link-padding-x: 10px;
   }
+
+  .custom-bg
+    .sm
+    .navbar-nav
+    .nav-link
+    .navbar.navbar-expand-lg.navbar-light
+    .container
+    .navbar-brand
+    .logo {
+    padding-right: var(--navbar-nav-link-padding-x);
+    padding-left: var(--navbar-nav-link-padding-x);
+  }
+
   .sm .navbar-nav-scroll {
     overflow: visible;
   }
@@ -436,10 +450,19 @@ footer {
   .md .navbar-nav .dropdown-menu {
     position: absolute;
   }
-  .md .navbar-nav .nav-link {
-    padding-right: var(--#{$prefix}navbar-nav-link-padding-x);
-    padding-left: var(--#{$prefix}navbar-nav-link-padding-x);
+
+  .custom-bg
+    .md
+    .navbar-nav
+    .nav-link
+    .navbar.navbar-expand-lg.navbar-light
+    .container
+    .navbar-brand
+    .logo {
+    padding-right: var(--navbar-nav-link-padding-x);
+    padding-left: var(--navbar-nav-link-padding-x);
   }
+
   .md .navbar-nav-scroll {
     overflow: visible;
   }
