@@ -14,7 +14,6 @@ public class Mercearia extends Produtos {
     
     private static final long serialVersionUID = 1L;
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID merceariaId;
@@ -24,7 +23,6 @@ public class Mercearia extends Produtos {
     private String subCategoria;
     
   //----------------------------------------------------------------------\\
-
 
     public UUID getMerceariaId() {
         return merceariaId;
