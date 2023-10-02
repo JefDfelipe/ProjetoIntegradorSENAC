@@ -28,9 +28,34 @@ public class Item extends Produtos {
     @NotBlank
     @Column(nullable = false, unique = false)
     private String nome;
-    
+   
 
   //----------------------------------------------------------------------\\
 
+
+
+    public UUID getItemId() {
+      return itemId;
+    }
+
+    public void setItemId(UUID itemId) {
+      this.itemId = itemId;
+    }
+
+    public long getTipo() {
+      return tipo;
+    }
+
+    public void setTipo(long tipo) {
+      this.tipo = tipo;
+    }
+
+    public String getNome() {
+      return nome;
+    }
+
+    public void setNome(String nome) {
+      this.nome = nome;
+    }
   
 }

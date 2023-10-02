@@ -41,68 +41,55 @@ public class Produtos {
     @Column(nullable = false, unique = false)
     private float preco;
 
-
-    
   //----------------------------------------------------------------------\\
 
-    public UUID getprodutoId() {
 
+    public UUID getProdutoId() {
         return produtoId;
-
     }
 
-    public void setprodutoId(UUID produtoId) {
-
+    public void setProdutoId(UUID produtoId) {
         this.produtoId = produtoId;
-
     }
 
-    public long getcodigoDeBarras() {
-
+    public long getCodigoDeBarras() {
         return codigoDeBarras;
-
     }
 
-
-    public void setcodigoDeBarras(long codigoDeBarras) {
-
+    public void setCodigoDeBarras(long codigoDeBarras) {
         this.codigoDeBarras = codigoDeBarras;
-
     }
 
-    public String getmarca() {
-
+    public String getMarca() {
         return marca;
-
     }
 
-    public void setmarca(String marca) {
-
+    public void setMarca(String marca) {
         this.marca = marca;
-
     }
 
-    public String getcategoria() {
-
+    public String getCategoria() {
         return categoria;
-
     }
 
-    public void setcategoria(String categoria) {
-
+    public void setCategoria(String categoria) {
         this.categoria = categoria;
-
     }
 
-    public String getmercadoDeOrigem() {
-
+    public String getMercadoDeOrigem() {
         return mercadoDeOrigem;
-
     }
 
-    public void setmercadoDeOrigem(String mercadoDeOrigem) {
-
+    public void setMercadoDeOrigem(String mercadoDeOrigem) {
         this.mercadoDeOrigem = mercadoDeOrigem;
-
     }
+
+    public float getPreco() {
+        return preco;
+    }
+
+    public void setPreco(float preco) {
+        this.preco = preco;
+    }
+
 }

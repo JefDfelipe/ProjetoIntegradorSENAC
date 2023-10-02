@@ -23,7 +23,25 @@ public class Bebidas extends Produtos{
 
     @NotBlank
     @Column(nullable = false, unique = false)
-    private String subCategoria;
+    private String subCategoriaB;
     
+    
+  //----------------------------------------------------------------------\\
 
+    public UUID getBebidaId() {
+        return bebidaId;
+    }
+
+    public void setBebidaId(UUID bebidaId) {
+        this.bebidaId = bebidaId;
+    }
+
+    public String getSubCategoriaB() {
+        return subCategoriaB;
+    }
+
+    public void setSubCategoriaB(String subCategoriaB) {
+        this.subCategoriaB = subCategoriaB;
+    }
+  
 }

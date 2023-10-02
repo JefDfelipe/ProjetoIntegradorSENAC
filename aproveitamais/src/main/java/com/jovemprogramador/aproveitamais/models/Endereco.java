@@ -27,20 +27,24 @@ public class Endereco {
 	@Column(nullable = true, unique = false)
 	private String complemento;
 
-	public UUID getCodigoEndereço() {
+
+  //----------------------------------------------------------------------\\
+
+
+	public UUID getCodigoEndereco() {
 		return codigoEndereco;
 	}
 
-	public void setCodigoEndereço(UUID codigoEndereço) {
-		this.codigoEndereco = codigoEndereço;
+	public void setCodigoEndereco(UUID codigoEndereco) {
+		this.codigoEndereco = codigoEndereco;
 	}
 
 	public long getCEP() {
 		return CEP;
 	}
 
-	public void setCEP(long CEP) {
-		this.CEP = CEP;
+	public void setCEP(long cEP) {
+		CEP = cEP;
 	}
 
 	public String getNúmero() {
@@ -58,5 +62,5 @@ public class Endereco {
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
-
+  
 }
