@@ -89,6 +89,21 @@ button[type="submit"]:hover {
   background-color: #d13b75;
 }
 
+.btn-edit-profile{
+  width: 100%;
+  background-color: #d1627b;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit-profile:hover {
+  background-color: #d13b75;
+}
+
 nav ul {
   list-style: none;
   display: flex;
