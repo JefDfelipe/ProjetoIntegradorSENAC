@@ -15,6 +15,8 @@ import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class PessoaJuridica implements UserDetails {
+
+    private static final long serialVersionUID = 1L;
     
     
     @Id
@@ -51,8 +53,15 @@ public class PessoaJuridica implements UserDetails {
 	@Column(nullable = false, unique = true)
 	private String razaoSocial;
 
-    public UUID getempresaId(){
-        return empresaId;
+    
+  //----------------------------------------------------------------------\\
+
+    public UUID getCodigoEndereco() {
+        return codigoEndereco;
+    }
+
+    public void setCodigoEndereco(UUID codigoEndereco) {
+        this.codigoEndereco = codigoEndereco;
     }
 
     public String getlogin(){
