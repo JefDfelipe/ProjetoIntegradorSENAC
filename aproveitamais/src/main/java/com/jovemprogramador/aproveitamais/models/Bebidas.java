@@ -23,7 +23,7 @@ public class Bebidas extends Produtos{
 
     @NotBlank
     @Column(nullable = false, unique = false)
-    private String subCategoria;
+    private String subCategoriaB;
     
 
 }
