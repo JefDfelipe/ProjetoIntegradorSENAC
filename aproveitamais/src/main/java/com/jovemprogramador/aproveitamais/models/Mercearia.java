@@ -21,9 +21,7 @@ public class Mercearia extends Produtos {
 
     @NotBlank
     @Column(nullable = false, unique = false)
-    private String subCategoriaM;
-
-
+    private String subCategoria;
     
   //----------------------------------------------------------------------\\
 
@@ -36,12 +34,12 @@ public class Mercearia extends Produtos {
         this.merceariaId = merceariaId;
     }
 
-    public String getSubCategoriaM() {
-        return subCategoriaM;
+    public String getSubCategoria() {
+        return subCategoria;
     }
 
-    public void setSubCategoriaM(String subCategoriaM) {
-        this.subCategoriaM = subCategoriaM;
+    public void setSubCategoria(String subCategoria) {
+        this.subCategoria = subCategoria;
     }
 
 }

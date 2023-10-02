@@ -23,7 +23,7 @@ public class Bebidas extends Produtos{
 
     @NotBlank
     @Column(nullable = false, unique = false)
-    private String subCategoriaB;
+    private String subCategoria;
     
     
   //----------------------------------------------------------------------\\
@@ -36,12 +36,12 @@ public class Bebidas extends Produtos{
         this.bebidaId = bebidaId;
     }
 
-    public String getSubCategoriaB() {
-        return subCategoriaB;
+    public String getSubCategoria() {
+        return subCategoria;
     }
 
-    public void setSubCategoriaB(String subCategoriaB) {
-        this.subCategoriaB = subCategoriaB;
+    public void setSubCategoria(String subCategoria) {
+        this.subCategoria = subCategoria;
     }
   
 }
