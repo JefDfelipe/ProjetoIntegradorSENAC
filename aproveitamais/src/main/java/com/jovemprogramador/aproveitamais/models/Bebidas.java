@@ -15,8 +15,6 @@ public class Bebidas extends Produtos{
 
     private static final long serialVersionUID = 1L;
 
-    
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID bebidaId;
@@ -25,5 +23,22 @@ public class Bebidas extends Produtos{
     @Column(nullable = false, unique = false)
     private String subCategoria;
     
+  //----------------------------------------------------------------------\\
 
+    public UUID getBebidaId() {
+        return bebidaId;
+    }
+
+    public void setBebidaId(UUID bebidaId) {
+        this.bebidaId = bebidaId;
+    }
+
+    public String getSubCategoria() {
+        return subCategoria;
+    }
+
+    public void setSubCategoria(String subCategoria) {
+        this.subCategoria = subCategoria;
+    }
+  
 }

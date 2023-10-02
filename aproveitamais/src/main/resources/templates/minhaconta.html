@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aproveita+ Minha Conta</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="../static/style/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light custom-bg">
+      <div class="container">
+        <a class="navbar-brand" href="file:///C:/Users/Pc/Desktop/aproveitamais/ProjetoIntegradorSENAC-1/aproveitamais/src/main/resources/templates/home.html">
+          <img
+            src="https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/logo.png"
+            alt="Aproveita+" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Produtos</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="file:///C:/Users/Pc/Desktop/aproveitamais/ProjetoIntegradorSENAC-1/aproveitamais/src/main/resources/templates/alimentos.html">Alimentos</a>
+                <a class="dropdown-item" href="file:///C:/Users/Pc/Desktop/aproveitamais/ProjetoIntegradorSENAC-1/aproveitamais/src/main/resources/templates/bebidas.html">Bebidas</a>
+              </div>
+            </li>
+          </ul>
+          <!-- Barra de pesquisa -->
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar produtos..." aria-label="Search">
+            <button class="btn btn-buscar-home my-2 my-sm-0" id="buscarButton" type="submit">Buscar</button>
+          </form>
+          <ul class="navbar-nav icons">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="file:///C:/Users/Pc/Desktop/aproveitamais/ProjetoIntegradorSENAC-1/aproveitamais/src/main/resources/templates/minhaconta.html" id="minhaContaDropdown" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="minhaContaDropdown">
+                <a class="dropdown-item" href="file:///C:/Users/Pc/Desktop/aproveitamais/ProjetoIntegradorSENAC-1/aproveitamais/src/main/resources/templates/login.html">Login</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="file:///C:/Users/Pc/Desktop/aproveitamais/ProjetoIntegradorSENAC-1/aproveitamais/src/main/resources/templates/cadastro.html">Cadastre-se</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="file:///C:/Users/Pc/Desktop/aproveitamais/ProjetoIntegradorSENAC-1/aproveitamais/src/main/resources/templates/carrinho.html"><i class="fas fa-shopping-cart"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="profile">
+    <div class="container content-container login-page">
+      <h2 class="login-title">Minha Conta</h2>
+      <div class="box">
+            <div class="profile-info">
+                <!-- Exiba as informações do perfil do usuário aqui -->
+                <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" value="Nome do Usuário" disabled>
+                </div>
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="usuario@email.com" disabled>
+                </div>
+                <!-- Outras informações do perfil -->
+            </div>
+            <button class="btn-edit-profile">Editar Perfil</button>
+        </div>
+    </div>
+  </section>
+
+  <section class="edit-profile" style="display: none;">
+    <div class="container">
+      <h2>Editar Perfil</h2>
+      <form>
+        <div class="form-group">
+          <label for="edit-nome">Nome:</label>
+          <input type="text" id="edit-nome" value="Nome do Usuário">
+        </div>
+        <div class="form-group">
+          <label for="edit-email">Email:</label>
+          <input type="email" id="edit-email" value="usuario@email.com">
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha:</label>
+          <input type="password" id="edit-senha" name="senha" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmar-senha">Confirmar Senha:</label>
+          <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+        </div>
+        <!-- Outros campos para edição do perfil -->
+        <button type="submit" class="btn-save-profile">Salvar Alterações</button>
+      </form>
+    </div>
+  </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Aproveita+. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.btn-edit-profile').click(function () {
+          // Esconder informações do perfil e mostrar formulário de edição
+          $('.profile-info').hide();
+          $('.edit-profile').show();
+        });
+  
+        $('.btn-save-profile').click(function (e) {
+          e.preventDefault();
+          // Processar o envio do formulário de edição e atualizar as informações do perfil
+          const novoNome = $('#edit-nome').val();
+          const novoEmail = $('#edit-email').val();
+          const novaSenha = $('#edit-senha').val();
+         
+
+  
+          // Enviar as informações para o servidor e atualizar o perfil do usuário
+  
+          // Após a atualização bem-sucedida, atualize as informações exibidas
+          $('#nome').val(novoNome);
+          $('#email').val(novoEmail);
+          $('#senha').val(novoSenha);
+
+  
+          // Esconder o formulário de edição e mostrar as informações do perfil
+          $('.edit-profile').hide();
+          $('.profile-info').show();
+        });
+      });
+    </script>
+  </body>
+  </html>
