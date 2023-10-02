@@ -51,13 +51,13 @@ public class PessoaFisica implements UserDetails {
 
 	public UUID getCodigoEndereço() {
 
-		return codigoEndereço;
+		return codigoEndereco;
 
 	}
 
 	public void setCodigoEndereço(UUID codigoEndereço) {
 
-		this.codigoEndereço = codigoEndereço;
+		this.codigoEndereco = codigoEndereco;
 
 	}
 
