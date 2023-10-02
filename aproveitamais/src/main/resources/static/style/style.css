@@ -17,6 +17,7 @@ body {
   min-width: 100%;
 }
 
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -86,6 +87,21 @@ button[type="submit"]:hover {
 }
 
 .button-pagamento:hover {
+  background-color: #d13b75;
+}
+
+.btn-edit-profile{
+  width: 100%;
+  background-color: #d1627b;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit-profile:hover {
   background-color: #d13b75;
 }
 
@@ -390,6 +406,11 @@ footer {
 /* Você pode definir seus pontos de interrupção de grade aqui */
 /* $grid-breakpoints: (sm: 576px, md: 768px, lg: 992px, xl: 1200px); */
 
+/* variável customizada para CSS */
+:root {
+  --ajusta-navbar-nav-link-padding-x: 10px;
+}
+
 /* Loop pelos pontos de interrupção */
 @media screen and (min-width: 576px) {
   /* Defina estilos para este ponto de interrupção e maiores */
@@ -403,12 +424,7 @@ footer {
   .sm .navbar-nav .dropdown-menu {
     position: absolute;
   }
-
-  /* variável customizada para CSS */
-  :root {
-    --ajusta-navbar-nav-link-padding-x: 10px;
-  }
-
+  
   .custom-bg
     .sm
     .navbar-nav

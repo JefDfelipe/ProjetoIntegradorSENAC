@@ -12,9 +12,7 @@ import jakarta.validation.constraints.NotBlank;
 @Entity
 public class Bomboniere extends Mercearia {
     
-
     private static final long serialVersionUID = 1L;
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

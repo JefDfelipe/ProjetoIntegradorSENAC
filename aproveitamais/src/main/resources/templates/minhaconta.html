@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrinho de Compras</title>
+  <title>Aproveita+ Minha Conta</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="../static/style/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -60,25 +60,50 @@
     </nav>
   </header>
 
-  <section class="cart">
+  <section class="profile">
     <div class="container content-container login-page">
-      <h2>Carrinho de Compras</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Produto</th>
-            <th>Preço</th>
-            <th>Quantidade</th>
-            <th>Total</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody id="cart-items">
-          <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
-        </tbody>
-      </table>
-      <p>Total: R$ <span id="cart-total">0.00</span></p>
-      <button class="button-pagamento" onclick="irParaPagamento()">Ir para o Pagamento</button>
+      <h2 class="login-title">Minha Conta</h2>
+      <div class="box">
+            <div class="profile-info">
+                <!-- Exiba as informações do perfil do usuário aqui -->
+                <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" value="Nome do Usuário" disabled>
+                </div>
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="usuario@email.com" disabled>
+                </div>
+                <!-- Outras informações do perfil -->
+            </div>
+            <button class="btn-edit-profile">Editar Perfil</button>
+        </div>
+    </div>
+  </section>
+
+  <section class="edit-profile" style="display: none;">
+    <div class="container">
+      <h2>Editar Perfil</h2>
+      <form>
+        <div class="form-group">
+          <label for="edit-nome">Nome:</label>
+          <input type="text" id="edit-nome" value="Nome do Usuário">
+        </div>
+        <div class="form-group">
+          <label for="edit-email">Email:</label>
+          <input type="email" id="edit-email" value="usuario@email.com">
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha:</label>
+          <input type="password" id="edit-senha" name="senha" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmar-senha">Confirmar Senha:</label>
+          <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+        </div>
+        <!-- Outros campos para edição do perfil -->
+        <button type="submit" class="btn-save-profile">Salvar Alterações</button>
+      </form>
     </div>
   </section>
 
@@ -87,89 +112,40 @@
         <p>&copy; 2023 Aproveita+. Todos os direitos reservados.</p>
       </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.btn-edit-profile').click(function () {
+          // Esconder informações do perfil e mostrar formulário de edição
+          $('.profile-info').hide();
+          $('.edit-profile').show();
+        });
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const addToCartButtons = document.querySelectorAll('.add-to-cart');
-      const cartItemsContainer = document.getElementById('cart-items');
-      const cartTotal = document.getElementById('cart-total');
+        $('.btn-save-profile').click(function (e) {
+          e.preventDefault();
+          // Processar o envio do formulário de edição e atualizar as informações do perfil
+          const novoNome = $('#edit-nome').val();
+          const novoEmail = $('#edit-email').val();
+          const novaSenha = $('#edit-senha').val();
+         
+
   
-      let carrinho = [];
+          // Enviar as informações para o servidor e atualizar o perfil do usuário
   
-      addToCartButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-          // Obter informações do produto
-          const productTitle = document.querySelectorAll('.product-title')[index].textContent;
-          const productPrice = parseFloat(document.querySelectorAll('.product-details')[index].textContent.replace('R$', ''));
+          // Após a atualização bem-sucedida, atualize as informações exibidas
+          $('#nome').val(novoNome);
+          $('#email').val(novoEmail);
+          $('#senha').val(novoSenha);
+
   
-          // Adicionar o produto ao carrinho
-          adicionarAoCarrinho({ nome: productTitle, preco: productPrice });
-  
-          // Atualizar o carrinho na interface
-          updateCart();
+          // Esconder o formulário de edição e mostrar as informações do perfil
+          $('.edit-profile').hide();
+          $('.profile-info').show();
         });
       });
-  
-      // Função para adicionar um item ao carrinho
-      function adicionarAoCarrinho(item) {
-        carrinho.push(item);
-        calcularTotal();
-      }
-  
-      // Função para remover um item do carrinho
-      function removerDoCarrinho(index) {
-        carrinho.splice(index, 1);
-        calcularTotal();
-      }
-  
-      // Função para calcular o total do carrinho
-      function calcularTotal() {
-        let total = 0;
-        carrinho.forEach((item) => {
-          total += item.preco;
-        });
-        return total;
-      }
-  
-      // Função para atualizar a exibição do carrinho
-      function updateCart() {
-        // Limpar a tabela de itens do carrinho
-        cartItemsContainer.innerHTML = '';
-  
-        // Atualizar o conteúdo do contêiner de itens do carrinho
-        carrinho.forEach((item, index) => {
-          const productBox = document.createElement('div'); // Criar uma div para cada produto
-          productBox.classList.add('product-box'); // Adicionar uma classe CSS para a div do produto
-  
-          productBox.innerHTML = `
-            <div>${item.nome}</div>
-            <div>R$ ${item.preco.toFixed(2)}</div>
-            <div>1</div>
-            <div>R$ ${item.preco.toFixed(2)}</div>
-            <div>
-              <button onclick="removerDoCarrinho(${index})">Remover</button>
-            </div>
-          `;
-  
-          cartItemsContainer.appendChild(productBox);
-        });
-  
-        // Atualizar o total do carrinho
-        cartTotal.textContent = `Total: R$ ${calcularTotal().toFixed(2)}`;
-      }
-  
-      // Função para redirecionar para a página de pagamento
-      function irParaPagamento() {
-        // Redirecione para a página de pagamento
-        window.location.href = 'pagamento.html';
-      }
-    });
-  </script>
-  
-
-</body>
-
-</html>
+    </script>
+  </body>
+  </html>

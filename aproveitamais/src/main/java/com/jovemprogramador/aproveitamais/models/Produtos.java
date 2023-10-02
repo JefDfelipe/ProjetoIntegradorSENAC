@@ -14,10 +14,7 @@ import jakarta.validation.constraints.NotBlank;
 @Entity
 public class Produtos {
 
-
-
     private static final long serialVersionUID = 1L;
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -48,7 +45,6 @@ public class Produtos {
     private List<Mercearia> mercearias;
 
   //----------------------------------------------------------------------\\
-
 
     public UUID getProdutoId() {
         return produtoId;
