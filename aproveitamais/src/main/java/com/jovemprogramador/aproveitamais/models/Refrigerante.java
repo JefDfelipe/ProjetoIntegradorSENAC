@@ -23,5 +23,24 @@ public class Refrigerante extends Bebidas {
     @NotBlank
     @Column(nullable = false, unique = true)
     private String itens;
+ 
+  //----------------------------------------------------------------------\\
+
+
+    public UUID getRefrigeranteId() {
+        return refrigeranteId;
+    }
+
+    public void setRefrigeranteId(UUID refrigeranteId) {
+        this.refrigeranteId = refrigeranteId;
+    }
+
+    public String getItens() {
+        return itens;
+    }
+
+    public void setItens(String itens) {
+        this.itens = itens;
+    }
 
 }

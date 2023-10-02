@@ -20,5 +20,25 @@ public class Sucos extends Bebidas {
     @NotBlank
     @Column(nullable = false, unique = false)
     private String itens;
+    
+    
+  //----------------------------------------------------------------------\\
+
+
+    public UUID getSucoId() {
+        return sucoId;
+    }
+
+    public void setSucoId(UUID sucoId) {
+        this.sucoId = sucoId;
+    }
+
+    public String getItens() {
+        return itens;
+    }
+
+    public void setItens(String itens) {
+        this.itens = itens;
+    }
 
 }

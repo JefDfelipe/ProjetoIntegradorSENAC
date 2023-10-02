@@ -23,4 +23,25 @@ public class Mercearia extends Produtos {
     @Column(nullable = false, unique = false)
     private String subCategoriaM;
 
+
+    
+  //----------------------------------------------------------------------\\
+
+
+    public UUID getMerceariaId() {
+        return merceariaId;
+    }
+
+    public void setMerceariaId(UUID merceariaId) {
+        this.merceariaId = merceariaId;
+    }
+
+    public String getSubCategoriaM() {
+        return subCategoriaM;
+    }
+
+    public void setSubCategoriaM(String subCategoriaM) {
+        this.subCategoriaM = subCategoriaM;
+    }
+
 }
