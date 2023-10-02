@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.jovemprogramador.aproveitamais.models.Bebidas;
 import com.jovemprogramador.aproveitamais.models.PessoaFisica;
 import com.jovemprogramador.aproveitamais.models.PessoaJuridica;
 import com.jovemprogramador.aproveitamais.models.Produtos;
@@ -38,7 +39,7 @@ public class appController {
 			return "redirect:/login";
 		}
 
-		@RequestMapping(value = "/cadastro", method = RequestMethod.POST)
+	@RequestMapping(value = "/cadastro", method = RequestMethod.POST)
 		public String formPJ(@Valid PessoaJuridica pessoaJuridica, BindingResult result, 
 				RedirectAttributes attributes) {
 			
@@ -55,10 +56,16 @@ public class appController {
 	public ModelAndView todosOsProdutos(){
 		ModelAndView mv = new ModelAndView("home/todososprodutos");
 		Iterable<Produtos> produtos = pr.findAll();
-		mv.addObject("Produtos", mv);
+		mv.addObject("Produtos", produtos);
 		return mv;
 	}
 
-        
+    @RequestMapping("/bebidas")
+	public ModelAndView bebidas(){
+		ModelAndView mv = new ModelAndView("home/bebidas");
+		Iterable<Produtos> bebidas = pr.findAll();
+		mv.addObject("Bebidas", bebidas);
+		return mv;
+	}    
 
-    }
+}
