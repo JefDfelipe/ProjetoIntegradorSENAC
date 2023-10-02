@@ -39,7 +39,7 @@ public class PessoaJuridica implements UserDetails {
 
     @NotBlank
 	@Column(nullable = false, unique = true)
-	private UUID codigoEndereço;
+	private UUID codigoEndereco;
 
 	@Column(nullable = true, unique = true)
 	private String inscricaoEstadual;

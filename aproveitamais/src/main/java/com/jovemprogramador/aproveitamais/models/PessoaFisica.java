@@ -17,7 +17,6 @@ import jakarta.validation.constraints.NotBlank;
 @Entity
 public class PessoaFisica implements UserDetails {
 
-
     private static final long serialVersionUID = 1L;
 
 	@Id
@@ -46,7 +45,7 @@ public class PessoaFisica implements UserDetails {
 
 	@NotBlank
 	@Column(nullable = false, unique = true)
-	private UUID codigoEndereço;
+	private UUID codigoEndereco;
 
   //----------------------------------------------------------------------\\
 
