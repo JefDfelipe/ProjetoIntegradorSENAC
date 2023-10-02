@@ -391,7 +391,7 @@ footer {
 
   /* variável customizada para CSS */
   :root {
-    --example-prefix-navbar-nav-link-padding-x: 10px;
+    --ajusta-navbar-nav-link-padding-x: 10px;
   }
 
   .custom-bg
@@ -402,8 +402,8 @@ footer {
     .container
     .navbar-brand
     .logo {
-    padding-right: var(--navbar-nav-link-padding-x);
-    padding-left: var(--navbar-nav-link-padding-x);
+    padding-right: var(--ajusta-navbar-nav-link-padding-x);
+    padding-left: var(--ajusta-navbar-nav-link-padding-x);
   }
 
   .sm .navbar-nav-scroll {
@@ -459,8 +459,8 @@ footer {
     .container
     .navbar-brand
     .logo {
-    padding-right: var(--navbar-nav-link-padding-x);
-    padding-left: var(--navbar-nav-link-padding-x);
+    padding-right: var(--ajusta-navbar-nav-link-padding-x);
+    padding-left: var(--ajusta-navbar-nav-link-padding-x);
   }
 
   .md .navbar-nav-scroll {
