@@ -15,8 +15,6 @@ public class Bebidas extends Produtos{
 
     private static final long serialVersionUID = 1L;
 
-    
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID bebidaId;
@@ -24,7 +22,6 @@ public class Bebidas extends Produtos{
     @NotBlank
     @Column(nullable = false, unique = false)
     private String subCategoria;
-    
     
   //----------------------------------------------------------------------\\
 
