@@ -157,15 +157,6 @@
       cartItemsContainer.appendChild(productBox);
     });
 
-      const removeButton = document.createElement('button');
-      removeButton.textContent = 'Remover';
-      removeButton.addEventListener('click', () => {
-        removerDoCarrinho(index);
-        updateCart();
-      });
-      cellAcoes.appendChild(removeButton);
-    });
-
     // Atualizar o total do carrinho
     cartTotal.textContent = `Total: R$ ${calcularTotal().toFixed(2)}`;
   }
