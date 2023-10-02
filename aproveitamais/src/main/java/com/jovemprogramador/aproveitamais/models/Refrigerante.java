@@ -12,9 +12,7 @@ import jakarta.validation.constraints.NotBlank;
 @Entity
 public class Refrigerante extends Bebidas {
     
-
     private static final long serialVersionUID = 1L;
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,7 +23,6 @@ public class Refrigerante extends Bebidas {
     private String itens;
  
   //----------------------------------------------------------------------\\
-
 
     public UUID getRefrigeranteId() {
         return refrigeranteId;

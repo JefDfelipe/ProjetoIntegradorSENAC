@@ -13,10 +13,8 @@ import jakarta.validation.constraints.NotBlank;
 @Entity
 public class Item extends Produtos {
 
-    
     private static final long serialVersionUID = 1L;
 
-    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID itemId;
@@ -29,10 +27,7 @@ public class Item extends Produtos {
     @Column(nullable = false, unique = false)
     private String nome;
    
-
   //----------------------------------------------------------------------\\
-
-
 
     public UUID getItemId() {
       return itemId;

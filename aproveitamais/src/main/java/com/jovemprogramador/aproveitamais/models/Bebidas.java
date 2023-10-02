@@ -12,7 +12,6 @@ import jakarta.validation.constraints.NotBlank;
 @Entity
 public class Bebidas extends Produtos{
     
-
     private static final long serialVersionUID = 1L;
 
     @Id

@@ -10,7 +10,6 @@ import jakarta.validation.constraints.NotBlank;
 
 public class Sucos extends Bebidas {
     
-
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -21,9 +20,7 @@ public class Sucos extends Bebidas {
     @Column(nullable = false, unique = false)
     private String itens;
     
-    
   //----------------------------------------------------------------------\\
-
 
     public UUID getSucoId() {
         return sucoId;
