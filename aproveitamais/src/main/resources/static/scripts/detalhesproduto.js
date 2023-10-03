@@ -18,39 +18,111 @@ function getParameterByName(name, url) {
   
     // Objeto contendo informações dos produtos
     const produtos = {
-      produto9: {
-        id: "produto9",
-        nome: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
-        preco: 5.00,
-        vencimento: "12/12/2023",
-        descricao: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
-        imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto1.png"
-      },
-      produto1: {
+        produto1: {
         id: "produto1",
         nome: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
-        preco: 5.00,
+        preco: "5,00",
         vencimento: "12/12/2023",
         descricao: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
         imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto1.png"
-      },
-      produto2: {
+    },
+    produto2: {
         id: "produto2",
         nome: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
-        preco: 5.00,
+        preco: "5,00",
         vencimento: "12/12/2023",
         descricao: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
         imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto1.png"
-      },
-      produto3: {
+    },
+    produto3: {
         id: "produto3",
         nome: "Snack de Batata Cheddar Elma Chips Stax Pote 156g",
-        preco: 5.00,
+        preco: "5,00",
         vencimento: "12/12/2023",
         descricao: "Snack à Base de Batata com Queijo Cheddar Elma Chips Stax Pote 156g",
         imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto2.png"
     },
-    };
+    produto4: {
+        id: "produto4",
+        nome: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
+        preco: "5,00",
+        vencimento: "12/12/2023",
+        descricao: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
+        imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto1.png"
+    },
+    produto5: {
+        id: "produto5",
+        nome: "Snack de Batata Cheddar Elma Chips Stax Pote 156g",
+        preco: "5,00",
+        vencimento: "12/12/2023",
+        descricao: "Snack à Base de Batata com Queijo Cheddar Elma Chips Stax Pote 156g",
+        imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto2.png"
+    },
+    produto6: {
+        id: "produto6",
+        nome: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
+        preco: "5,00",
+        vencimento: "12/12/2023",
+        descricao: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
+        imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto1.png"
+    },
+    produto7: {
+        id: "produto7",
+        nome: "Snack de Batata Cheddar Elma Chips Stax Pote 156g",
+        preco: "5,00",
+        vencimento: "12/12/2023",
+        descricao: "Snack à Base de Batata com Queijo Cheddar Elma Chips Stax Pote 156g",
+        imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto2.png"
+    },
+    produto8: {
+        id: "produto8",
+        nome: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
+        preco: "5,00",
+        vencimento: "12/12/2023",
+        descricao: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
+        imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto1.png"
+    },
+    produto9: {
+      id: "produto9",
+      nome: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
+      preco: "5,00",
+      vencimento: "12/12/2023",
+      descricao: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
+      imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto1.png"
+    },
+    produto10: {
+        id: "produto10",
+        nome: "Snack de Batata Cheddar Elma Chips Stax Pote 156g",
+        preco: "5,00",
+        vencimento: "12/12/2023",
+        descricao: "Snack à Base de Batata com Queijo Cheddar Elma Chips Stax Pote 156g",
+        imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto2.png"
+    },
+    produto11: {
+    id: "produto11",
+    nome: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
+    preco: "5,00",
+    vencimento: "12/12/2023",
+    descricao: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
+    imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto1.png"
+    },
+    produto12: {
+    id: "produto12",
+    nome: "Snack de Batata Cheddar Elma Chips Stax Pote 156g",
+    preco: "5,00",
+    vencimento: "12/12/2023",
+    descricao: "Snack à Base de Batata com Queijo Cheddar Elma Chips Stax Pote 156g",
+    imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto2.png"
+    },
+    produto13: {
+    id: "produto13",
+    nome: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
+    preco: "5,00",
+    vencimento: "12/12/2023",
+    descricao: "Chocolate ao Leite Alpine Milk Milka Pacote 100g",
+    imagemUrl: "https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto1.png"
+    },
+};
   
     // Função para exibir detalhes do produto com base no produtoId
     function exibirDetalhesProduto(produtoId) {
@@ -58,30 +130,37 @@ function getParameterByName(name, url) {
       if (produto) {
         const productImage = document.getElementById('product-image');
         productImage.src = produto.imagemUrl;
-  
+
+        // Converter o preço para um número antes de usar toFixed()
+    const precoNumerico = parseFloat(produto.preco);
+
+    if (!isNaN(precoNumerico)) {
         productDetailsContainer.innerHTML = `
-          <h1>${produto.nome}</h1>
-          <div class="price-and-quantity">
-            <div class="price">
-              <span class="label">Preço:</span>
-              <div class="price-value">R$ <span class="value">${produto.preco.toFixed(2)}</span></div>
-            </div>
-            <p class="product-expiry">VENCIMENTO: ${produto.vencimento}</p>
-            <div class="quantity">
-              <span class="label">Quantidade:</span>
-              <input type="number" class="quantity-input" value="1" min="1">
-              </div>
-              </div>
-              <button class="add-to-cart" data-id="${produtoId}" data-price="${produto.preco}">Adicionar ao Carrinho</button>
-          <div class="description">
-            <h2>Descrição do Produto</h2>
-            <hr>
-            <p>${produto.descricao}</p>
+        <h1>${produto.nome}</h1>
+        <div class="price-and-quantity">
+          <div class="price">
+            <span class="label">Preço:</span>
+            <div class="price-value">R$ <span class="value">${precoNumerico.toFixed(2)}</span></div>
           </div>
-        `;
-      } else {
-        productDetailsContainer.innerHTML = 'Produto não encontrado.';
+          <p class="product-expiry">VENCIMENTO: ${produto.vencimento}</p>
+          <div class="quantity">
+            <span class="label">Quantidade:</span>
+            <input type="number" class="quantity-input" value="1" min="1">
+          </div>
+        </div>
+        <button class="add-to-cart" data-id="${produtoId}" data-price="${precoNumerico}">Adicionar ao Carrinho</button>
+        <div class="description">
+          <h2>Descrição do Produto</h2>
+          <hr>
+          <p>${produto.descricao}</p>
+        </div>
+      `;
+    } else {
+        productDetailsContainer.innerHTML = 'Preço inválido.';
       }
+    } else {
+      productDetailsContainer.innerHTML = 'Produto não encontrado.';
+    }
     }
   
     // Obter o valor do parâmetro 'produto' na URL
