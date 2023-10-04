@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const products = document.querySelectorAll('.product');
+  const carrinho = [];
 
   products.forEach((product) => {
     const addToCartButton = product.querySelector('.add-to-cart');
@@ -95,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Função para calcular o total do carrinho
   function calcularTotal() {
     let total = 0;
+
     carrinho.forEach((item) => {
       total += item.preco * item.quantidade;
     });
