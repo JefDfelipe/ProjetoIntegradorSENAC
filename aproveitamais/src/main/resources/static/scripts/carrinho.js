@@ -67,9 +67,10 @@ document.addEventListener('DOMContentLoaded', function () {
     cartTotal.textContent = `Total: R$ ${calcularTotal().toFixed(2)}`;
   }
 
-  // Função para redirecionar para a página de pagamento
-  function irParaPagamento() {
-    // Redirecione para a página de pagamento
-    window.location.href = 'pagamento.html';
-  }
 });
+
+// Função para redirecionar para a página de pagamento
+function irParaPagamento() {
+  // Redirecione para a página de pagamento
+  return location.href = 'finalizarcompra.html';
+}
