@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const products = document.querySelectorAll('.product');
+  const carrinho = [];
 
   products.forEach((product) => {
     const addToCartButton = product.querySelector('.add-to-cart');
