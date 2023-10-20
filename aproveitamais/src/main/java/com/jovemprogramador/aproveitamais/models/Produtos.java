@@ -15,7 +15,7 @@ public class Produtos {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO) 
     private UUID produtoId;
 
     @NotBlank

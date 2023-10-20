@@ -38,19 +38,18 @@ public class appController {
 			return "redirect:/login";
 		}
 
-		@RequestMapping(value = "/cadastro", method = RequestMethod.POST)
-		public String formPJ(@Valid PessoaJuridica pessoaJuridica, BindingResult result, 
-				RedirectAttributes attributes) {
+		// @RequestMapping(value = "/cadastro", method = RequestMethod.POST)
+		// public String formPJ(@Valid PessoaJuridica pessoaJuridica, BindingResult result, 
+		// 		RedirectAttributes attributes) {
 			
-			if(result.hasErrors()) {
-				attributes.addFlashAttribute("mensagem", "Verifique os campos!");
-				return "redirect:/cadastro";
-			}
-			pj.save(pessoaJuridica);
-			attributes.addFlashAttribute("mensagem", "Concluido");
-			return "redirect:/login";
-		}
-
+		// 	if(result.hasErrors()) {
+		// 		attributes.addFlashAttribute("mensagem", "Verifique os campos!");
+		// 		return "redirect:/cadastro";
+		// 	}
+		// 	pj.save(pessoaJuridica);
+		// 	attributes.addFlashAttribute("mensagem", "Concluido");
+		// 	return "redirect:/login";
+		// }
 	@RequestMapping("/todososprodutos")
 	public ModelAndView todosOsProdutos(){
 		ModelAndView mv = new ModelAndView("home/todososprodutos");
