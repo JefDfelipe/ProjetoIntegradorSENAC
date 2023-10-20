@@ -1,5 +1,6 @@
 package com.jovemprogramador.aproveitamais.models;
 
+import java.util.List;
 import java.util.UUID;
 
 import jakarta.persistence.Column;
@@ -7,6 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
@@ -37,6 +39,10 @@ public class Produtos {
     @NotBlank
     @Column(nullable = false, unique = false)
     private float preco;
+
+    @OneToMany
+    private List<Bebidas> bebidas;
+    private List<Mercearia> mercearias;
 
   //----------------------------------------------------------------------\\
 

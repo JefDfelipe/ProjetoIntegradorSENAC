@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Compra</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="../static/style/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light custom-bg">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">
+        <img
+          src="https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/logo.png"
+          alt="Aproveita+" class="logo">
+      </a>
+    </div>
+  </nav>
+</header>
+
+<body>
+  <div>
+    <section class="checkout">
+      <h2>Resumo do Pedido</h2>
+
+      <!-- Lista de produtos no carrinho -->
+      <ul class="cart-items">
+        <!-- Item do carrinho (exemplo) -->
+        <li class="cart-item">
+          <div class="product-image">
+            <!-- Imagem do produto -->
+          </div>
+          <div class="product-details">
+            <!-- Detalhes do produto -->
+          </div>
+          <div class="product-actions">
+            <!-- Ações do produto (excluir, substituir, observações) -->
+          </div>
+        </li>
+        <!-- Outros itens do carrinho aqui -->
+      </ul>
+
+      <!-- Opções em caso de falta de produtos -->
+      <div class="product-options">
+        <h3>Em caso de falta de um produto</h3>
+        <label>
+          <input type="radio" name="product-option" value="substitute" checked> Escolha um substituto por mim
+        </label>
+        <label>
+          <input type="radio" name="product-option" value="delete"> Exclua o produto do meu pedido
+        </label>
+        <label>
+          <input type="radio" name="product-option" value="contact"> Entre em contato comigo
+        </label>
+      </div>
+
+      <!-- Campo para observações -->
+      <div class="order-notes">
+        <label for="order-notes">Observações sobre a compra:</label>
+        <textarea id="order-notes" name="order-notes" rows="4"
+          placeholder="Adicione observações sobre o seu pedido"></textarea>
+      </div>
+
+      <!-- Subtotal e Total -->
+      <div class="subtotal">
+        <p>Subtotal: <span id="subtotal-value">R$ 0.00</span></p>
+      </div>
+      <div class="total">
+        <p>Total: <span id="total-value">R$ 0.00</span></p>
+      </div>
+
+      <a class="finalizar" href="home.html">Continuar Comprando</butt>
+
+        <!-- Botão para finalizar a compra -->
+        <button class="checkout-button">Finalizar Compra</button>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Aproveita+. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="../static/scripts/finalizarcompra.js"></script>
+
+</body>
+
+</html>

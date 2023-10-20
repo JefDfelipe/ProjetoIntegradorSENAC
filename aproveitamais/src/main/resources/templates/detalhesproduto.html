@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aproveita+</title>
+  <title>Aproveita+ | Detalhes do Produto</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="../static/style/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -42,8 +42,7 @@
           <ul class="navbar-nav icons">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="minhaconta.html" id="minhaContaDropdown" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user"></i>
+                aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>
               </a>
               <div class="dropdown-menu" aria-labelledby="minhaContaDropdown">
                 <a class="dropdown-item" href="login.html">Login</a>
@@ -61,68 +60,22 @@
   </header>
 
   <div class="container">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicadores de slides -->
-      <ul class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-      </ul>
-
-      <!-- Slides -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://i.ibb.co/Xbz7ZR9/pexels-gustavo-fring-3985062.jpg" class="d-block w-100" alt="Slide 1">
-        </div>
-        <div class="carousel-item">
-          <img src="https://i.ibb.co/vwTdxMr/pexels-gustavo-fring-4971945.jpg" class="d-block w-100" alt="Slide 2">
-        </div>
-        <div class="carousel-item">
-          <img src="https://i.ibb.co/gTLx2HF/shopping-1165437-960-720.jpg" class="d-block w-100" alt="Slide 3">
-        </div>
-        <div class="carousel-item">
-          <img src="https://i.ibb.co/GF4gWcp/pexels-kampus-production-8476597.jpg" class="d-block w-100" alt="Slide 4">
-        </div>
+    <div class="product-page">
+      <div class="product-details1" id="product-details">
+        <!-- Detalhes do produto serão inseridos aqui pelo JavaScript -->
       </div>
-
-      <!-- Controles do carousel -->
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Próximo</span>
-      </a>
+      <div class="product-image">
+        <img id="product-image" src="" alt="Imagem do Produto">
+      </div>
+    </div>
+    <!-- Descrição do Produto -->
+    <div class="description">
+      <!--<h2>Descrição do Produto</h2>
+            <hr>-->
+      <p id="product-description"></p>
     </div>
   </div>
-  <section class="main-content">
-    <div class="container products-container">
-      <!-- Produto 1 -->
-      <div class="product">
-        <a href="detalhesproduto.html?produto=produto2"></a>
-        <img
-          src="https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto1.png"
-          alt="Produto 3">
-        <h2 class="product-title">Chocolate ao Leite Alpine Milk Milka Pacote 100g</h2>
-        <p class="product-expiry">VENCIMENTO: 12/12/2023.</p>
-        <p class="product-details"> R$ 5,00</p>
-        <button class="add-to-cart" data-id="produto2" data-price="5.00">Adicionar ao Carrinho</button>
-      </div>
-      <!-- Produto 2 -->
-      <div class="product">
-        <a href="detalhesproduto.html?produto=produto3"></a>
-        <img
-          src="https://raw.githubusercontent.com/JefDfelipe/ProjetoIntegradorSENAC/efa40fef3c04fb54c2a8720fd3f292f723eee886/produto2.png"
-          alt="Produto 3">
-        <h2 class="product-title">Snack de Batata Cheddar Elma Chips Stax Pote 156g</h2>
-        <p class="product-expiry">VENCIMENTO: 15/12/2023.</p>
-        <p class="product-details"> R$ 5,00</p>
-        <button class="add-to-cart" data-id="produto3" data-price="5.00">Adicionar ao Carrinho</button>
-      </div>
-    </div>
-  </section>
+
   <footer>
     <div class="container">
       <p>&copy; 2023 Aproveita+. Todos os direitos reservados.</p>
@@ -132,7 +85,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="../static/scripts/home.js"></script>
+  <script src="../static/scripts/detalhesproduto.js"></script>
 
 </body>
 

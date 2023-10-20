@@ -401,6 +401,209 @@ footer {
   border: 2px solid #fff; /* Cor da borda do ponto ativo */
 }
 
+/* Detelahes dos produtos(pagina de detalhes*/
+
+.product-page {
+  display: flex;
+  align-items: center;
+}
+
+.product-details1 {
+  flex: 1;
+  padding: 20px;
+}
+
+.product-image {
+  flex: 1;
+  text-align: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-details .product-details {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.product-details .product-expiry {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.price-and-quantity {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  margin-right: 20px;
+}
+
+.price .label {
+  font-weight: bold;
+}
+
+.price-value {
+  font-size: 30px;
+  font-weight: bold;
+  color: #d13b75;
+  margin-left: 15px;
+}
+
+.quantity {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.quantity .label {
+  font-weight: bold;
+}
+
+.quantity-input {
+  width: 40px;
+  padding: 5px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.description {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.description h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #d13b75;
+}
+
+.description hr {
+  margin-top: 10px;
+  border: none;
+  border-top: 2px solid #d13b75;
+}
+
+.description p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333; /* Cor do texto da descrição */
+}
+
+/*Estilos pagina checkout*/
+
+/* Estilos para o resumo do pedido */
+.checkout {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  text-align: left;
+}
+
+.checkout h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.product-actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-options label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.order-notes {
+  margin-top: 20px;
+}
+
+.order-notes label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#order-notes {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+.checkout-button {
+  background-color: #d13b75;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+
+.checkout-button:hover {
+  background-color: #9c2542;
+}
+
+.checkout-button {
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+.finalizar {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.finalizar a {
+  text-decoration: none;
+  color: #d13b75;
+  font-weight: bold;
+}
+
+.finalizar a:hover {
+  text-decoration: underline;
+}
+
+
 /* Estilos para a classe .navbar-expand */
 
 /* Você pode definir seus pontos de interrupção de grade aqui */
