@@ -1,4 +1,5 @@
 {
   "java.compile.nullAnalysis.mode": "automatic",
-  "livePreview.defaultPreviewPath": "/aproveitamais/src/main/resources/templates/home.html"
+  "livePreview.defaultPreviewPath": "/aproveitamais/src/main/resources/templates/home.html",
+  "java.configuration.updateBuildConfiguration": "interactive"
 }
