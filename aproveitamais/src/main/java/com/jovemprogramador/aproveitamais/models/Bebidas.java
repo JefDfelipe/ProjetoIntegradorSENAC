@@ -10,12 +10,9 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-public class Bebidas extends Produtos{
-    
+public class Bebidas extends Produtos {
 
     private static final long serialVersionUID = 1L;
-
-    
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,9 +21,8 @@ public class Bebidas extends Produtos{
     @NotBlank
     @Column(nullable = false, unique = false)
     private String subCategoria;
-    
-    
-  //----------------------------------------------------------------------\\
+
+    // ----------------------------------------------------------------------\\
 
     public UUID getBebidaId() {
         return bebidaId;
@@ -43,5 +39,5 @@ public class Bebidas extends Produtos{
     public void setSubCategoria(String subCategoria) {
         this.subCategoria = subCategoria;
     }
-  
+
 }

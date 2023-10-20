@@ -11,9 +11,8 @@ import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class Mercearia extends Produtos {
-    
-    private static final long serialVersionUID = 1L;
 
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,9 +21,8 @@ public class Mercearia extends Produtos {
     @NotBlank
     @Column(nullable = false, unique = false)
     private String subCategoria;
-    
-  //----------------------------------------------------------------------\\
 
+    // ----------------------------------------------------------------------\\
 
     public UUID getMerceariaId() {
         return merceariaId;

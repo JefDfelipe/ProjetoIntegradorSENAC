@@ -9,53 +9,47 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 
-
 @Entity
 public class Item extends Produtos {
 
-    
-    private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID itemId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private UUID itemId;
 
-    @NotBlank
-    @Column(nullable = false, unique = true)
-    private long tipo;
+  @NotBlank
+  @Column(nullable = false, unique = true)
+  private long tipo;
 
-    @NotBlank
-    @Column(nullable = false, unique = false)
-    private String nome;
-   
+  @NotBlank
+  @Column(nullable = false, unique = false)
+  private String nome;
 
-  //----------------------------------------------------------------------\\
+  // ----------------------------------------------------------------------\\
 
+  public UUID getItemId() {
+    return itemId;
+  }
 
+  public void setItemId(UUID itemId) {
+    this.itemId = itemId;
+  }
 
-    public UUID getItemId() {
-      return itemId;
-    }
+  public long getTipo() {
+    return tipo;
+  }
 
-    public void setItemId(UUID itemId) {
-      this.itemId = itemId;
-    }
+  public void setTipo(long tipo) {
+    this.tipo = tipo;
+  }
 
-    public long getTipo() {
-      return tipo;
-    }
+  public String getNome() {
+    return nome;
+  }
 
-    public void setTipo(long tipo) {
-      this.tipo = tipo;
-    }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-    public String getNome() {
-      return nome;
-    }
-
-    public void setNome(String nome) {
-      this.nome = nome;
-    }
-  
 }

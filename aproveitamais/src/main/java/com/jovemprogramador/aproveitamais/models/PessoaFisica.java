@@ -13,12 +13,10 @@ import java.util.UUID;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 
-
 @Entity
 public class PessoaFisica implements UserDetails {
 
-
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -48,7 +46,7 @@ public class PessoaFisica implements UserDetails {
 	@Column(nullable = false, unique = true)
 	private UUID codigoEndereço;
 
-  //----------------------------------------------------------------------\\
+	// ----------------------------------------------------------------------\\
 
 	public UUID getCodigoEndereço() {
 
@@ -62,13 +60,11 @@ public class PessoaFisica implements UserDetails {
 
 	}
 
-
 	public UUID getClientId() {
 
 		return clientId;
 
 	}
-
 
 	public void setClientId(UUID clientId) {
 
@@ -76,13 +72,11 @@ public class PessoaFisica implements UserDetails {
 
 	}
 
-
 	public String getNomeCliente() {
 
 		return nomeCliente;
 
 	}
-
 
 	public void setNomeCliente(String nomeCliente) {
 
@@ -96,13 +90,11 @@ public class PessoaFisica implements UserDetails {
 
 	}
 
-
 	public void setCPF(long cPF) {
 
 		this.CPF = cPF;
 
 	}
-
 
 	public String getLogin() {
 
@@ -110,20 +102,17 @@ public class PessoaFisica implements UserDetails {
 
 	}
 
-
 	public void setLogin(String login) {
 
 		this.login = login;
 
 	}
 
-
 	public String getSenha() {
 
 		return senha;
 
 	}
-
 
 	public void setSenha(String senha) {
 
@@ -143,46 +132,46 @@ public class PessoaFisica implements UserDetails {
 
 	}
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-            
-        throw new UnsupportedOperationException("Unimplemented method 'getAuthorities'");
-    }
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
 
-    @Override
-    public String getPassword() {
-            
-        return this.getPassword();
-    }
-
-    @Override
-    public String getUsername() {
-            
-        return this.getUsername();
+		throw new UnsupportedOperationException("Unimplemented method 'getAuthorities'");
 	}
 
 	@Override
-    public boolean isAccountNonExpired() {
-            
-        return true;
-    }
+	public String getPassword() {
 
-    @Override
-    public boolean isAccountNonLocked() {
-            
-        return true;
-    }
+		return this.getPassword();
+	}
 
-    @Override
-    public boolean isCredentialsNonExpired() {
-          
-        return true;
-    }
+	@Override
+	public String getUsername() {
 
-    @Override
-    public boolean isEnabled() {
-            
-        return true;
-    }
-     
+		return this.getUsername();
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+
+		return true;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+
+		return true;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+
+		return true;
+	}
+
+	@Override
+	public boolean isEnabled() {
+
+		return true;
+	}
+
 }
