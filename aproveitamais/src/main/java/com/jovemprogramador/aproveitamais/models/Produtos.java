@@ -40,10 +40,6 @@ public class Produtos {
     @Column(nullable = false, unique = false)
     private float preco;
 
-    @OneToMany
-    private List<Bebidas> bebidas;
-    private List<Mercearia> mercearias;
-
   //----------------------------------------------------------------------\\
 
     public UUID getProdutoId() {
