@@ -15,59 +15,60 @@ import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class PessoaJuridica implements UserDetails {
-    
-    
+
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID empresaId;
-    
+
     @NotBlank
     @Column(nullable = false, unique = true)
     private String login;
-	
+
     @NotBlank
     @Column(nullable = false, unique = true)
-	private String nomeEmpresa;
-	
+    private String nomeEmpresa;
+
     @NotBlank
     @Column(nullable = false, unique = false)
-	private String senha;
+    private String senha;
 
     @NotBlank
     @Column(nullable = false, unique = true)
     private long CNPJ;
 
     @NotBlank
-	@Column(nullable = false, unique = true)
-	private UUID codigoEndereço;
+    @Column(nullable = false, unique = true)
+    private UUID codigoEndereço;
 
-	@Column(nullable = true, unique = true)
-	private String inscricaoEstadual;
+    @Column(nullable = true, unique = true)
+    private String inscricaoEstadual;
 
-	@Column(nullable = false, unique = false)
-	private String nomeFantasia;
+    @Column(nullable = false, unique = false)
+    private String nomeFantasia;
 
     @NotBlank
-	@Column(nullable = false, unique = true)
-	private String razaoSocial;
+    @Column(nullable = false, unique = true)
+    private String razaoSocial;
 
-    public UUID getempresaId(){
+    public UUID getempresaId() {
         return empresaId;
     }
 
-    public String getlogin(){
+    public String getlogin() {
         return login;
     }
 
-    public String getnomeEmpresa(){
+    public String getnomeEmpresa() {
         return nomeEmpresa;
     }
 
-    public String getsenha(){
+    public String getsenha() {
         return senha;
     }
 
-    public long getCNPJ(){
+    public long getCNPJ() {
         return CNPJ;
     }
 
@@ -97,43 +98,43 @@ public class PessoaJuridica implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        
+
         throw new UnsupportedOperationException("Unimplemented method 'getAuthorities'");
     }
 
     @Override
     public String getPassword() {
-        
+
         return this.senha;
     }
 
     @Override
     public String getUsername() {
-        
+
         return this.login;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        
+
         return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        
+
         return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        
-        return true;    
+
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        
+
         return true;
     }
 
