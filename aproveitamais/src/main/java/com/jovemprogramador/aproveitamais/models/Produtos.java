@@ -33,7 +33,7 @@ public class Produtos {
   @NotBlank
   @Column(nullable = false, unique = true)
   @Enumerated(EnumType.STRING)
-  private String categoria;
+  private Categoria categoria;
 
   @NotBlank
   @Column(nullable = false, unique = false)
@@ -67,14 +67,6 @@ public class Produtos {
 
   public void setMarca(String marca) {
     this.marca = marca;
-  }
-
-  public String getCategoria() {
-    return categoria;
-  }
-
-  public void setCategoria(String categoria) {
-    this.categoria = categoria;
   }
 
   public String getMercadoDeOrigem() {

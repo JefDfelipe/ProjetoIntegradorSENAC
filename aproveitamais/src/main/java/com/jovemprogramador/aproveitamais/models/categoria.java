@@ -1,6 +1,6 @@
 package com.jovemprogramador.aproveitamais.models;
 
-public enum categoria {
+public enum Categoria {
 
     BEBIDAS_ALCOOLICAS,
     BEBIDAS,
@@ -11,6 +11,5 @@ public enum categoria {
     FRUTAS,
     VERDURAS,
     CONGELADOS,
-
     
 }
