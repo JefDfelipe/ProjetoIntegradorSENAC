@@ -51,5 +51,47 @@ public class Alimentos {
 
   // ----------------------------------------------------------------------\\
 
+<<<<<<< HEAD:aproveitamais/src/main/java/com/jovemprogramador/aproveitamais/models/Alimentos.java
+=======
+  public UUID getProdutoId() {
+    return produtoId;
+  }
+
+  public void setProdutoId(UUID produtoId) {
+    this.produtoId = produtoId;
+  }
+
+  public long getCodigoDeBarras() {
+    return codigoDeBarras;
+  }
+
+  public void setCodigoDeBarras(long codigoDeBarras) {
+    this.codigoDeBarras = codigoDeBarras;
+  }
+
+  public String getMarca() {
+    return marca;
+  }
+
+  public void setMarca(String marca) {
+    this.marca = marca;
+  }
+
+  public String getMercadoDeOrigem() {
+    return mercadoDeOrigem;
+  }
+
+  public void setMercadoDeOrigem(String mercadoDeOrigem) {
+    this.mercadoDeOrigem = mercadoDeOrigem;
+  }
+
+  public float getPreco() {
+    return preco;
+  }
+
+  public void setPreco(float preco) {
+    this.preco = preco;
+  }
+>>>>>>> 87d2dc1aef0593b0ded63b6eb1fc0094049d04c7:aproveitamais/src/main/java/com/jovemprogramador/aproveitamais/models/Produtos.java
 
 }
