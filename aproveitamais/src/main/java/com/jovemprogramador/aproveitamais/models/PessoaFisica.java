@@ -11,10 +11,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import java.util.UUID;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
 
 
 @Entity
+@Data
+@Table(name = "pessoafisica")
 public class PessoaFisica implements UserDetails {
 
     private static final long serialVersionUID = 1L;
@@ -48,99 +52,6 @@ public class PessoaFisica implements UserDetails {
 	private UUID codigoEndereco;
 
   //----------------------------------------------------------------------\\
-
-	public UUID getCodigoEndereço() {
-
-		return codigoEndereco;
-
-	}
-
-	public void setCodigoEndereço(UUID codigoEndereço) {
-
-		this.codigoEndereco = codigoEndereco;
-
-	}
-
-
-	public UUID getClientId() {
-
-		return clientId;
-
-	}
-
-
-	public void setClientId(UUID clientId) {
-
-		this.clientId = clientId;
-
-	}
-
-
-	public String getNomeCliente() {
-
-		return nomeCliente;
-
-	}
-
-
-	public void setNomeCliente(String nomeCliente) {
-
-		this.nomeCliente = nomeCliente;
-
-	}
-
-	public long getCPF() {
-
-		return CPF;
-
-	}
-
-
-	public void setCPF(long cPF) {
-
-		this.CPF = cPF;
-
-	}
-
-
-	public String getLogin() {
-
-		return login;
-
-	}
-
-
-	public void setLogin(String login) {
-
-		this.login = login;
-
-	}
-
-
-	public String getSenha() {
-
-		return senha;
-
-	}
-
-
-	public void setSenha(String senha) {
-
-		this.senha = senha;
-
-	}
-
-	public String getTelefone() {
-
-		return telefone;
-
-	}
-
-	public void setTelefone(String telefone) {
-
-		this.telefone = telefone;
-
-	}
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

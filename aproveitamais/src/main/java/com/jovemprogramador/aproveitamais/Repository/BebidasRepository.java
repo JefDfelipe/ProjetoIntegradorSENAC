@@ -4,8 +4,9 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.jovemprogramador.aproveitamais.models.PessoaFisica;
+import com.jovemprogramador.aproveitamais.models.Bebidas;
 
-public interface PessoaFisicaRepository extends JpaRepository<PessoaFisica, UUID> {
 
+public interface BebidasRepository extends JpaRepository<Bebidas, UUID> {
+    
 }

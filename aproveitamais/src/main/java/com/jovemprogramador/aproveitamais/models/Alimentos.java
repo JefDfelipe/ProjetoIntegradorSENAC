@@ -1,6 +1,6 @@
 package com.jovemprogramador.aproveitamais.models;
 
-import java.util.List;
+
 import java.util.UUID;
 
 import jakarta.persistence.Column;
@@ -10,17 +10,23 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+
+
+
 
 @Entity
-public class Produtos {
+@Data
+@Table(name = "alimentos")
+public class Alimentos {
 
   private static final long serialVersionUID = 1L;
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private UUID produtoId;
+  private UUID alimentosId;
 
   @NotBlank
   @Column(nullable = false, unique = true)
@@ -33,7 +39,7 @@ public class Produtos {
   @NotBlank
   @Column(nullable = false, unique = true)
   @Enumerated(EnumType.STRING)
-  private String categoria;
+  private Categoria categoria;
 
   @NotBlank
   @Column(nullable = false, unique = false)
@@ -45,52 +51,5 @@ public class Produtos {
 
   // ----------------------------------------------------------------------\\
 
-  public UUID getProdutoId() {
-    return produtoId;
-  }
-
-  public void setProdutoId(UUID produtoId) {
-    this.produtoId = produtoId;
-  }
-
-  public long getCodigoDeBarras() {
-    return codigoDeBarras;
-  }
-
-  public void setCodigoDeBarras(long codigoDeBarras) {
-    this.codigoDeBarras = codigoDeBarras;
-  }
-
-  public String getMarca() {
-    return marca;
-  }
-
-  public void setMarca(String marca) {
-    this.marca = marca;
-  }
-
-  public String getCategoria() {
-    return categoria;
-  }
-
-  public void setCategoria(String categoria) {
-    this.categoria = categoria;
-  }
-
-  public String getMercadoDeOrigem() {
-    return mercadoDeOrigem;
-  }
-
-  public void setMercadoDeOrigem(String mercadoDeOrigem) {
-    this.mercadoDeOrigem = mercadoDeOrigem;
-  }
-
-  public float getPreco() {
-    return preco;
-  }
-
-  public void setPreco(float preco) {
-    this.preco = preco;
-  }
 
 }

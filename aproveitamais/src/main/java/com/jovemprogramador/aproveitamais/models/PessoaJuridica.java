@@ -11,9 +11,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
 
 @Entity
+@Data
+@Table(name = "pessoajuridica")
 public class PessoaJuridica implements UserDetails {
 
     private static final long serialVersionUID = 1L;
@@ -55,53 +59,6 @@ public class PessoaJuridica implements UserDetails {
     
   //----------------------------------------------------------------------\\
 
-    public UUID getCodigoEndereco() {
-        return codigoEndereco;
-    }
-
-    public void setCodigoEndereco(UUID codigoEndereco) {
-        this.codigoEndereco = codigoEndereco;
-    }
-
-    public String getlogin(){
-        return login;
-    }
-
-    public String getnomeEmpresa(){
-        return nomeEmpresa;
-    }
-
-    public String getsenha(){
-        return senha;
-    }
-
-    public long getCNPJ(){
-        return CNPJ;
-    }
-
-    public String getInscricaoEstadual() {
-        return inscricaoEstadual;
-    }
-
-    public void setInscricaoEstadual(String inscricaoEstadual) {
-        this.inscricaoEstadual = inscricaoEstadual;
-    }
-
-    public String getNomeFantasia() {
-        return nomeFantasia;
-    }
-
-    public void setNomeFantasia(String nomeFantasia) {
-        this.nomeFantasia = nomeFantasia;
-    }
-
-    public String getRazaoSocial() {
-        return razaoSocial;
-    }
-
-    public void setRazaoSocial(String razaoSocial) {
-        this.razaoSocial = razaoSocial;
-    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

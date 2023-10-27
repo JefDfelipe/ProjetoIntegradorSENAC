@@ -8,11 +8,7 @@ import com.jovemprogramador.aproveitamais.models.PessoaJuridica;
 
 
 public interface PessoaJuridicaRepository extends JpaRepository<PessoaJuridica, UUID> {
-    
 
-        PessoaJuridica findByLogin(String login);
-
-        
 
 }
 
