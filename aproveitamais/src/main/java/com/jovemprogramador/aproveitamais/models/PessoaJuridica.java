@@ -20,86 +20,84 @@ import lombok.Data;
 @Table(name = "pessoajuridica")
 public class PessoaJuridica implements UserDetails {
 
-    private static final long serialVersionUID = 1L;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID empresaId;
-    
-    @NotBlank
-    @Column(nullable = false, unique = true)
-    private String login;
-	
-    @NotBlank
-    @Column(nullable = false, unique = true)
-	private String nomeEmpresa;
-	
-    @NotBlank
-    @Column(nullable = false, unique = false)
-	private String senha;
+  private static final long serialVersionUID = 1L;
 
-    @NotBlank
-    @Column(nullable = false, unique = true)
-    private long CNPJ;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private UUID empresaId;
 
-    @NotBlank
-	@Column(nullable = false, unique = true)
-	private UUID codigoEndereco;
+  @NotBlank
+  @Column(nullable = false, unique = true)
+  private String login;
 
-	@Column(nullable = true, unique = true)
-	private String inscricaoEstadual;
+  @NotBlank
+  @Column(nullable = false, unique = true)
+  private String nomeEmpresa;
 
-	@Column(nullable = false, unique = false)
-	private String nomeFantasia;
+  @NotBlank
+  @Column(nullable = false, unique = false)
+  private String senha;
 
-    @NotBlank
-	@Column(nullable = false, unique = true)
-	private String razaoSocial;
+  @NotBlank
+  @Column(nullable = false, unique = true)
+  private long CNPJ;
 
-    
-  //----------------------------------------------------------------------\\
+  @NotBlank
+  @Column(nullable = false, unique = true)
+  private UUID codigoEndereco;
 
+  @Column(nullable = true, unique = true)
+  private String inscricaoEstadual;
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        
-        throw new UnsupportedOperationException("Unimplemented method 'getAuthorities'");
-    }
+  @Column(nullable = false, unique = false)
+  private String nomeFantasia;
 
-    @Override
-    public String getPassword() {
-        
-        return this.senha;
-    }
+  @NotBlank
+  @Column(nullable = false, unique = true)
+  private String razaoSocial;
 
-    @Override
-    public String getUsername() {
-        
-        return this.login;
-    }
+  // ----------------------------------------------------------------------\\
 
-    @Override
-    public boolean isAccountNonExpired() {
-        
-        return true;
-    }
+  @Override
+  public Collection<? extends GrantedAuthority> getAuthorities() {
 
-    @Override
-    public boolean isAccountNonLocked() {
-        
-        return true;
-    }
+    throw new UnsupportedOperationException("Unimplemented method 'getAuthorities'");
+  }
 
-    @Override
-    public boolean isCredentialsNonExpired() {
-        
-        return true;    
-    }
+  @Override
+  public String getPassword() {
 
-    @Override
-    public boolean isEnabled() {
-        
-        return true;
-    }
+    return this.senha;
+  }
+
+  @Override
+  public String getUsername() {
+
+    return this.login;
+  }
+
+  @Override
+  public boolean isAccountNonExpired() {
+
+    return true;
+  }
+
+  @Override
+  public boolean isAccountNonLocked() {
+
+    return true;
+  }
+
+  @Override
+  public boolean isCredentialsNonExpired() {
+
+    return true;
+  }
+
+  @Override
+  public boolean isEnabled() {
+
+    return true;
+  }
 
 }

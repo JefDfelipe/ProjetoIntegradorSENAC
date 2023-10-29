@@ -1,6 +1,5 @@
 package com.jovemprogramador.aproveitamais.repository;
 
-
 import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,5 +8,4 @@ import com.jovemprogramador.aproveitamais.models.Alimentos;
 
 public interface AlimentosRepository extends JpaRepository<Alimentos, UUID> {
 
-    
 }

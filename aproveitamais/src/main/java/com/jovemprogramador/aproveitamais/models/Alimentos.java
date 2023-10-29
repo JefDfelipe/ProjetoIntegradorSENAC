@@ -1,6 +1,5 @@
 package com.jovemprogramador.aproveitamais.models;
 
-
 import java.util.UUID;
 
 import jakarta.persistence.Column;
@@ -14,9 +13,6 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
-
-
-
 @Entity
 @Data
 @Table(name = "alimentos")
@@ -26,10 +22,25 @@ public class Alimentos {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
+  /*
+   * sugestão online
+   * 
+   * @Type(type = "uuid-char")
+   * verificar com prof
+   */
   private UUID alimentosId;
+
+  public UUID getId() {
+    return alimentosId;
+  }
 
   @NotBlank
   @Column(nullable = false, unique = true)
+  /*
+   * sugestão online
+   * 
+   * @NotNull (motivo: campo numérico)
+   */
   private long codigoDeBarras;
 
   @NotBlank
@@ -47,51 +58,6 @@ public class Alimentos {
 
   @NotBlank
   @Column(nullable = false, unique = false)
-  private float preco;
-
-  // ----------------------------------------------------------------------\\
-
-<<<<<<< HEAD:aproveitamais/src/main/java/com/jovemprogramador/aproveitamais/models/Alimentos.java
-=======
-  public UUID getProdutoId() {
-    return produtoId;
-  }
-
-  public void setProdutoId(UUID produtoId) {
-    this.produtoId = produtoId;
-  }
-
-  public long getCodigoDeBarras() {
-    return codigoDeBarras;
-  }
-
-  public void setCodigoDeBarras(long codigoDeBarras) {
-    this.codigoDeBarras = codigoDeBarras;
-  }
-
-  public String getMarca() {
-    return marca;
-  }
-
-  public void setMarca(String marca) {
-    this.marca = marca;
-  }
-
-  public String getMercadoDeOrigem() {
-    return mercadoDeOrigem;
-  }
-
-  public void setMercadoDeOrigem(String mercadoDeOrigem) {
-    this.mercadoDeOrigem = mercadoDeOrigem;
-  }
-
-  public float getPreco() {
-    return preco;
-  }
-
-  public void setPreco(float preco) {
-    this.preco = preco;
-  }
->>>>>>> 87d2dc1aef0593b0ded63b6eb1fc0094049d04c7:aproveitamais/src/main/java/com/jovemprogramador/aproveitamais/models/Produtos.java
+  private double preco;
 
 }

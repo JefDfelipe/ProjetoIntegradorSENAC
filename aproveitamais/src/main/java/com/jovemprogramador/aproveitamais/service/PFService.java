@@ -12,22 +12,20 @@ import com.jovemprogramador.aproveitamais.repository.PessoaFisicaRepository;
 import jakarta.validation.Valid;
 
 public class PFService {
-    
 
+	@Autowired
+	private PessoaFisicaRepository pf;
 
-    @Autowired
-    private PessoaFisicaRepository pf;
+	@RequestMapping(value = "/cadastroPF", method = RequestMethod.POST)
+	public String formPF(@Valid PessoaFisica pessoaFisica, BindingResult result,
+			RedirectAttributes attributes) {
 
-     @RequestMapping(value = "/cadastroPF", method = RequestMethod.POST)
-		public String formPF(@Valid PessoaFisica pessoaFisica, BindingResult result, 
-				RedirectAttributes attributes) {
-			
-			if(result.hasErrors()) {
-				attributes.addFlashAttribute("mensagem", "Verifique os campos!");
-				return "redirect:/cadastro";
-			}
-			pf.save(pessoaFisica);
-			attributes.addFlashAttribute("mensagem", "Concluido");
-			return "redirect:/login";
+		if (result.hasErrors()) {
+			attributes.addFlashAttribute("mensagem", "Verifique os campos!");
+			return "redirect:/cadastro";
 		}
+		pf.save(pessoaFisica);
+		attributes.addFlashAttribute("mensagem", "Concluido");
+		return "redirect:/login";
+	}
 }
