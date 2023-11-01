@@ -10011,3 +10011,16 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    input[type="text"],
+    [type="email"],
+    [type="password"] {
+      width: 500px; /* Define a largura do campo de entrada */
+      height: 40px; /* Define a altura do campo de entrada */
+      padding: 10px; /* Define o preenchimento interno */
+      margin: 5px; /* Define a margem externa */
+    }
+    button,
+    [type="button"],
+    [type="submit"] {
+      width: 500px; }
