@@ -10,6 +10,6 @@ public enum Categoria {
   PADARIA,
   FRUTAS,
   VERDURAS,
-  CONGELADOS,
+  CONGELADOS
 
 }
