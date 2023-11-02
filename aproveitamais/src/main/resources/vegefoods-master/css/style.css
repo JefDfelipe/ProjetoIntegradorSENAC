@@ -13029,10 +13029,8 @@ textarea.form-control {
 input[type="text"],
 [type="email"],
 [type="password"] {
-  width: 500px; /* Define a largura do campo de entrada */
-  height: 40px; /* Define a altura do campo de entrada */
-  padding: 10px; /* Define o preenchimento interno */
-  margin: 5px; /* Define a margem externa */
+  height: 40px;
+  padding: 10px;
 }
 button,
 [type="button"],
@@ -13048,4 +13046,30 @@ button,
 .marquee {
   width: 100%;
   offset: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+}
+
+.submit-button {
+  width: 50%;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.form-group label-checkbox {
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
