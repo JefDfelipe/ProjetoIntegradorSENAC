@@ -10,39 +10,32 @@ import org.springframework.security.web.DefaultSecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
-    
 
+  @Bean
+  public DefaultSecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
+    http
 
-    @Bean
-    public DefaultSecurityFilterChain filterChain(HttpSecurity http) throws Exception{
+        .csrf((csrf) -> csrf.disable())
 
-        http
+        .authorizeHttpRequests((authz) -> authz
+            .requestMatchers(HttpMethod.GET, "/").permitAll()
+            .requestMatchers(HttpMethod.GET, "/cadastrarProdutos").hasRole("EMPRESA")
+            .requestMatchers(HttpMethod.POST, "/cadastrarProdutos").hasRole("EMPRESA")
+            .anyRequest().authenticated())
 
-            .csrf((csrf) -> csrf.disable())
+        .formLogin((formLogin) -> formLogin
 
-            .authorizeHttpRequests((authz) -> authz
-                .requestMatchers(HttpMethod.GET, "/").permitAll()
-                .requestMatchers(HttpMethod.GET, "/cadastrarProdutos").hasRole("EMPRESA")
-                .requestMatchers(HttpMethod.POST, "/cadastrarProdutos").hasRole("EMPRESA")
-                .anyRequest().authenticated()            
-            )
+            .loginPage("/login")
+            .defaultSuccessUrl("/minhaConta", true)
+            .permitAll())
 
-            .formLogin((formLogin) -> formLogin
+        .logout((logout) -> logout
 
-                    .loginPage("/login")
-                    .defaultSuccessUrl("/minhaConta", true)
-                    .permitAll()
-            )
+            .logoutSuccessUrl("/")
+            .permitAll());
 
-            .logout((logout) -> logout
-
-                    .logoutSuccessUrl("/")
-                    .permitAll()
-            );
-
-        return http.build();
-    }
-
+    return http.build();
+  }
 
 }
