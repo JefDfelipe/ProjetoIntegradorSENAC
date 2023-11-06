@@ -1,16 +1,14 @@
 package com.jovemprogramador.aproveitamais.service;
 
+import java.util.Optional;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.jovemprogramador.aproveitamais.models.PessoaFisica;
 import com.jovemprogramador.aproveitamais.repository.PessoaFisicaRepository;
 
-import jakarta.validation.Valid;
 
 
 @Service
@@ -19,16 +17,32 @@ public class PFService {
 	@Autowired
 	private PessoaFisicaRepository pf;
 
-	@RequestMapping(value = "/cadastroPF", method = RequestMethod.POST)
-	public String formPF(@Valid PessoaFisica pessoaFisica, BindingResult result,
-			RedirectAttributes attributes) {
+	
+	public PFService(PessoaFisicaRepository pf_) {
+        this.pf = pf_;
+    }
 
-		if (result.hasErrors()) {
-			attributes.addFlashAttribute("mensagem", "Verifique os campos!");
-			return "redirect:/cadastro";
-		}
-		pf.save(pessoaFisica);
-		attributes.addFlashAttribute("mensagem", "Concluido");
-		return "redirect:/login";
+
+	public PessoaFisica findById(UUID Id){
+		Optional <PessoaFisica> pessoaOptional = pf.findById(Id);
+		return pessoaOptional.orElse(null);
+
+		//return pf.findById(Id);
 	}
+
+
+	public PessoaFisica cadastrarPessoaFisica(PessoaFisica novaPessoaFisica) {
+
+		Optional<PessoaFisica> jaExistente = pf.findById(novaPessoaFisica.getClientId());
+
+		if (jaExistente.isPresent()) {
+			String msg = "Pessoa já cadastrada";
+
+			throw new IllegalStateException(msg);
+		}
+
+		return pf.save(novaPessoaFisica);
+	}
+
+
 }
