@@ -1,6 +1,7 @@
 package com.jovemprogramador.aproveitamais.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,6 +12,8 @@ import com.jovemprogramador.aproveitamais.repository.PessoaFisicaRepository;
 
 import jakarta.validation.Valid;
 
+
+@Service
 public class PFService {
 
 	@Autowired

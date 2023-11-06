@@ -19,48 +19,6 @@ import jakarta.validation.Valid;
 @RestController
 public class appController {
 
-	@Autowired
-	private PessoaFisicaRepository pf;
-	private PessoaJuridicaRepository pj;
-
-	@RequestMapping(value = "/cadastroPF", method = RequestMethod.POST)
-	public String formPF(@Valid PessoaFisica pessoaFisica, BindingResult result,
-			RedirectAttributes attributes) {
-
-		if (result.hasErrors()) {
-			attributes.addFlashAttribute("mensagem", "Verifique os campos!");
-			return "redirect:/cadastro";
-		}
-		pf.save(pessoaFisica);
-		attributes.addFlashAttribute("mensagem", "Concluido");
-		return "redirect:/login";
-	}
-
-	@RequestMapping(value = "/cadastroPJ", method = RequestMethod.POST)
-	public String formPJ(@Valid PessoaJuridica pessoaJuridica, BindingResult result,
-			RedirectAttributes attributes) {
-		if (result.hasErrors()) {
-			attributes.addFlashAttribute("mensagem", "Verifique os campos!");
-			return "redirect:/cadastro";
-		}
-		pj.save(pessoaJuridica);
-		attributes.addFlashAttribute("mensagem", "Concluido");
-		return "redirect:/login";
-	}
-	// @RequestMapping("/todososprodutos")
-	// public ModelAndView todosOsProdutos(){
-	// ModelAndView mv = new ModelAndView("home/todososprodutos");
-	// Iterable<Produtos> produtos = pr.findAll();
-	// mv.addObject("Produtos", produtos);
-	// return mv;
-	// }
-
-	// @RequestMapping("/bebidas")
-	// public ModelAndView bebidas(){
-	// ModelAndView mv = new ModelAndView("home/bebidas");
-	// Iterable<Produtos> bebidas = pr.findAll();
-	// mv.addObject("Bebidas", bebidas);
-	// return mv;
-	// }
+	
 
 }

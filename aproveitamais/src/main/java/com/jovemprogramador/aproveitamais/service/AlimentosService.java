@@ -4,13 +4,17 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.stereotype.Service;
+//import org.springframework.web.bind.annotation.RequestMapping;
+//import org.springframework.web.servlet.ModelAndView;
 
 import com.jovemprogramador.aproveitamais.models.Alimentos;
-import com.jovemprogramador.aproveitamais.models.Categoria;
+//import com.jovemprogramador.aproveitamais.models.Categoria;
 import com.jovemprogramador.aproveitamais.repository.AlimentosRepository;
 
+
+
+@Service
 public class AlimentosService {
 
 	private AlimentosRepository ar;
