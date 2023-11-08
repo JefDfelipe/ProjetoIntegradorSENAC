@@ -30,9 +30,7 @@ public class Alimentos {
    */
   private UUID alimentosId;
 
-  public UUID getId() {
-    return alimentosId;
-  }
+
 
   @NotBlank
   @Column(nullable = false, unique = true)

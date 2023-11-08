@@ -22,7 +22,7 @@ public class Bebidas {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private UUID bebidaId;
+  private UUID bebidasId;
 
   @NotBlank
   @Column(nullable = false, unique = true)
