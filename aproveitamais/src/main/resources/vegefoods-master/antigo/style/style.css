@@ -1,0 +1,754 @@
+/* Reset de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4daed1;
+  color: #fff;
+  min-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-width: 100%;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+}
+
+/* Estilos do header */
+header {
+  background-color: #4daed1;
+  color: #fff;
+  padding: 1px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  min-height: 10vh;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #d1627b;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #d13b75;
+}
+
+.btn-buscar-home {
+  width: 25%;
+  background-color: #d1627b;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 1px;
+}
+
+.btn-buscar-home:hover {
+  background-color: #d13b75;
+}
+
+.button-pagamento {
+  width: 100%;
+  background-color: #d1627b;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-pagamento:hover {
+  background-color: #d13b75;
+}
+
+.btn-edit-profile{
+  width: 100%;
+  background-color: #d1627b;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit-profile:hover {
+  background-color: #d13b75;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Espaço entre o menu e a barra de busca */
+}
+
+.nav ul li {
+  margin: 0 15px; /* Reduz a margem */
+}
+
+/* Adiciona uma margem entre os ícones do cabeçalho */
+.icons {
+  order: 3; /* Altera a ordem para aparecer depois dos outros elementos */
+  margin-left: 80px; /* Aumenta a margem à esquerda */
+}
+
+.navbar-nav.icons {
+  margin-top: 70px; /* Altere o valor conforme necessário */
+}
+
+.logo img {
+  height: 80px;
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px; /* Aumenta o espaçamento no cabeçalho */
+}
+
+.navbar-nav {
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.navbar-nav li {
+  margin: 0 15px; /* Ajuste a margem entre os itens do menu principal */
+}
+
+.navbar-nav.icons {
+  margin-top: 10px; /* Altere o valor conforme necessário */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.custom-bg {
+  background-color: #4daed1;
+}
+
+/* Estilos do conteúdo principal */
+.main-content {
+  text-align: center;
+  padding: 100px 0;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.signup-link a {
+  text-decoration: none;
+  color: #0f6f85;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para os campos de entrada */
+.form-group label {
+  margin-bottom: 8px;
+}
+
+.form-group label input[type="checkbox"] {
+  margin-left: 5px; /* Adicione uma margem à esquerda da caixa de seleção */
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.box h3 {
+  background-color: #0f6f85;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  margin-top: 0;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: #4daed1;
+  color: #fff;
+  text-align: center;
+
+  /* Footer mais responsivo */
+  padding: 10px 0;
+  width: 100%; /* Ocupa todo o espaço disponível */
+  box-sizing: border-box;
+  flex: 0 0 auto; /* O rodapé não crescerá, mas permanecerá no fundo */
+  margin-top: auto;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 200px);
+}
+
+/* Estilos especificos página de login */
+.login-page .box {
+  width: 100%; /* Defina a largura desejada para a página de login */
+  max-width: 900px; /* Defina o máximo de largura desejado */
+  margin: 0 auto; /* Centralize horizontalmente */
+  padding: 40px; /* Aumente o preenchimento vertical */
+}
+.login-title {
+  margin-left: 105px;
+}
+/* Estilos para a seção de produtos */
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px; /* Espaço entre os produtos */
+}
+
+.product {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%; /* Imagens ajustáveis ao tamanho do contêiner */
+}
+
+.product-title {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.product-details {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #888; /* Cor de detalhes mais suaves */
+}
+
+.product-expiry {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #888; /* Cor de detalhes mais suaves */
+}
+
+.add-to-cart {
+  background-color: #d13b75;
+  color: #fff;
+  padding: 10px 5px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.add-to-cart:hover {
+  background-color: #9c2542;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.featured-icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.icon {
+  text-align: center;
+}
+
+.product-menu ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-menu li {
+  margin: 10px;
+}
+
+.main-content {
+  margin-top: 10px;
+  text-align: center;
+  padding: 1px 0;
+}
+
+.form-inline .form-control {
+  flex: 1; /* Ocupa o espaço disponível restante */
+  margin-right: 5px; /* Espaço entre o campo de pesquisa e o botão */
+}
+
+.form-inline .btn-buscar-home {
+  flex: 0; /* Não cresce, tamanho fixo */
+}
+
+#myCarousel {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto; /* Centraliza o carousel horizontalmente */
+}
+
+#myCarousel .carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  color: #fff;
+  font-size: 30px; /* Tamanho das setas */
+  background: none; /* Remove o fundo das setas */
+}
+
+.carousel-inner .carousel-item {
+  transition-duration: 1s;
+}
+
+/* Estilize os indicadores de slides (pontos) */
+.carousel-indicators {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.carousel-indicators li {
+  background-color: #fff; /* Cor dos pontos */
+  border: 2px solid #007bff; /* Cor da borda dos pontos */
+  border-radius: 50%; /* Deixa os pontos redondos */
+  width: 12px; /* Tamanho dos pontos */
+  height: 12px;
+  margin: 0 6px; /* Espaçamento entre os pontos */
+  cursor: pointer;
+}
+
+.carousel-indicators .active {
+  background-color: #007bff; /* Cor do ponto ativo */
+  border: 2px solid #fff; /* Cor da borda do ponto ativo */
+}
+
+/* Detelahes dos produtos(pagina de detalhes*/
+
+.product-page {
+  display: flex;
+  align-items: center;
+}
+
+.product-details1 {
+  flex: 1;
+  padding: 20px;
+}
+
+.product-image {
+  flex: 1;
+  text-align: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-details .product-details {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.product-details .product-expiry {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.price-and-quantity {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  margin-right: 20px;
+}
+
+.price .label {
+  font-weight: bold;
+}
+
+.price-value {
+  font-size: 30px;
+  font-weight: bold;
+  color: #d13b75;
+  margin-left: 15px;
+}
+
+.quantity {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.quantity .label {
+  font-weight: bold;
+}
+
+.quantity-input {
+  width: 40px;
+  padding: 5px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.description {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.description h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #d13b75;
+}
+
+.description hr {
+  margin-top: 10px;
+  border: none;
+  border-top: 2px solid #d13b75;
+}
+
+.description p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333; /* Cor do texto da descrição */
+}
+
+/*Estilos pagina checkout*/
+
+/* Estilos para o resumo do pedido */
+.checkout {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  text-align: left;
+}
+
+.checkout h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.product-actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-options label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.order-notes {
+  margin-top: 20px;
+}
+
+.order-notes label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#order-notes {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+.checkout-button {
+  background-color: #d13b75;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+
+.checkout-button:hover {
+  background-color: #9c2542;
+}
+
+.checkout-button {
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+.finalizar {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.finalizar a {
+  text-decoration: none;
+  color: #d13b75;
+  font-weight: bold;
+}
+
+.finalizar a:hover {
+  text-decoration: underline;
+}
+
+
+/* Estilos para a classe .navbar-expand */
+
+/* Você pode definir seus pontos de interrupção de grade aqui */
+/* $grid-breakpoints: (sm: 576px, md: 768px, lg: 992px, xl: 1200px); */
+
+/* variável customizada para CSS */
+:root {
+  --ajusta-navbar-nav-link-padding-x: 10px;
+}
+
+/* Loop pelos pontos de interrupção */
+@media screen and (min-width: 576px) {
+  /* Defina estilos para este ponto de interrupção e maiores */
+  .sm {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .sm .navbar-nav {
+    flex-direction: row;
+  }
+  .sm .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+  
+  .custom-bg
+    .sm
+    .navbar-nav
+    .nav-link
+    .navbar.navbar-expand-lg.navbar-light
+    .container
+    .navbar-brand
+    .logo {
+    padding-right: var(--ajusta-navbar-nav-link-padding-x);
+    padding-left: var(--ajusta-navbar-nav-link-padding-x);
+  }
+
+  .sm .navbar-nav-scroll {
+    overflow: visible;
+  }
+  .sm .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .sm .navbar-toggler {
+    display: none;
+  }
+  .sm .offcanvas {
+    position: static;
+    z-index: auto;
+    flex-grow: 1;
+    width: auto !important;
+    height: auto !important;
+    visibility: visible !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    transform: none !important;
+  }
+  .sm .offcanvas .offcanvas-header {
+    display: none;
+  }
+  .sm .offcanvas .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* Defina estilos para este ponto de interrupção e maiores */
+  .md {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .md .navbar-nav {
+    flex-direction: row;
+  }
+  .md .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .custom-bg
+    .md
+    .navbar-nav
+    .nav-link
+    .navbar.navbar-expand-lg.navbar-light
+    .container
+    .navbar-brand
+    .logo {
+    padding-right: var(--ajusta-navbar-nav-link-padding-x);
+    padding-left: var(--ajusta-navbar-nav-link-padding-x);
+  }
+
+  .md .navbar-nav-scroll {
+    overflow: visible;
+  }
+  .md .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .md .navbar-toggler {
+    display: none;
+  }
+  .md .offcanvas {
+    position: static;
+    z-index: auto;
+    flex-grow: 1;
+    width: auto !important;
+    height: auto !important;
+    visibility: visible !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    transform: none !important;
+  }
+  .md .offcanvas .offcanvas-header {
+    display: none;
+  }
+  .md .offcanvas .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu li {
+    margin: 5px 0; /* Adiciona margem entre os itens do menu */
+    font-size: 14px; /* Reduz ainda mais o tamanho do texto do menu */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: 10px 0;
+    font-size: 16px; /* Reduz o tamanho do texto do menu */
+  }
+
+  .icons {
+    margin-left: 0;
+    margin-top: 20px; /* Adiciona espaço entre o menu e os ícones */
+  }
+}
