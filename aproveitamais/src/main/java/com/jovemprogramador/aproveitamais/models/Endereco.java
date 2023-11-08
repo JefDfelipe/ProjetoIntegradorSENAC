@@ -18,6 +18,10 @@ import lombok.Data;
 @Table(name = "Endereco")
 public class Endereco {
     
+
+  private static final long serialVersionUID = 1L;
+
+
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private UUID codigoEndereco;
