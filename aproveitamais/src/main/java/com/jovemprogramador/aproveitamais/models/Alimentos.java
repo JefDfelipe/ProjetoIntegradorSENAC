@@ -22,25 +22,11 @@ public class Alimentos {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  /*
-   * sugestão online
-   * 
-   * @Type(type = "uuid-char")
-   * verificar com prof
-   */
   private UUID alimentosId;
-
-  public UUID getId() {
-    return alimentosId;
-  }
 
   @NotBlank
   @Column(nullable = false, unique = true)
-  /*
-   * sugestão online
-   * 
-   * @NotNull (motivo: campo numérico)
-   */
+
   private long codigoDeBarras;
 
   @NotBlank

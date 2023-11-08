@@ -24,9 +24,9 @@ public class AlimentosService {
 		this.ar = ar_;
 	}
 
-	public Alimentos findById(UUID id) {
+	public Alimentos findById(UUID Id) {
 
-		Optional<Alimentos> alimentosOptional = ar.findById(id);
+		Optional<Alimentos> alimentosOptional = ar.findById(Id);
 		return alimentosOptional.orElse(null);
 
 		// return ar.findById(id);
@@ -34,7 +34,7 @@ public class AlimentosService {
 
 	public Alimentos cadastrarAlimento(Alimentos novoAlimento) {
 
-		Optional<Alimentos> jaExistente = ar.findById(novoAlimento.getId());
+		Optional<Alimentos> jaExistente = ar.findById(novoAlimento.getAlimentosId());
 
 		if (jaExistente.isPresent()) {
 			String msg = "Alimento já cadastrado";
@@ -44,6 +44,10 @@ public class AlimentosService {
 
 		return ar.save(novoAlimento);
 	}
+
+
+
+	
 
 	// @RequestMapping("/todososprodutos")
 	// public ModelAndView todosOsProdutos() {

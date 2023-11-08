@@ -14,10 +14,12 @@ import com.jovemprogramador.aproveitamais.repository.PessoaFisicaRepository;
 @Service
 public class PFService {
 
-	@Autowired
-	private PessoaFisicaRepository pf;
 
-	
+	PessoaFisicaRepository pf;
+
+
+
+	@Autowired
 	public PFService(PessoaFisicaRepository pf_) {
         this.pf = pf_;
     }

@@ -21,7 +21,7 @@ public class Pf_Controller {
 	@Autowired
 	private PessoaFisicaRepository pf;
 
-	@RequestMapping(value = "/cadastroPF", method = RequestMethod.POST)
+	@RequestMapping(value = "/cadastro", method = RequestMethod.POST)
 	public String formPF(@Valid PessoaFisica pessoaFisica, BindingResult result,
 			RedirectAttributes attributes) {
 
