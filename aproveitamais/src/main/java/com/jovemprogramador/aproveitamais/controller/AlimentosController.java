@@ -16,10 +16,10 @@ public class AlimentosController {
 	AlimentosRepository ar;
     
 	@RequestMapping("/alimentos")
-	 public ModelAndView todosOsProdutos(){
-	 ModelAndView mv = new ModelAndView("home/todososprodutos");
+	 public ModelAndView alimentos(){
+	 ModelAndView mv = new ModelAndView("home/alimentos");
 	 Iterable<Alimentos> produtos = ar.findAll();
-	 mv.addObject("Produtos", produtos);
+	 mv.addObject("Alimentos", alimentos());
 	 return mv;
 	}
 
