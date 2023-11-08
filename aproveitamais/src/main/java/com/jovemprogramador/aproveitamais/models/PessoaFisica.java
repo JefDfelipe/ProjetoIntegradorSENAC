@@ -17,7 +17,7 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "pessoafisica")
+@Table(name = "pessoa_fisica")
 public class PessoaFisica implements UserDetails {
 
   private static final long serialVersionUID = 1L;
