@@ -12,23 +12,21 @@ import com.jovemprogramador.aproveitamais.repository.PessoaJuridicaRepository;
 
 import jakarta.validation.Valid;
 
-
 @Service
 public class PJService {
-    
 
-    @Autowired
-    private PessoaJuridicaRepository pj;
+  @Autowired
+  private PessoaJuridicaRepository pj;
 
-    @RequestMapping(value = "/cadastroPJ", method = RequestMethod.POST)
-		public String formPJ(@Valid PessoaJuridica pessoaJuridica, BindingResult result, 
-				RedirectAttributes attributes) {
-			if(result.hasErrors()) {
-				attributes.addFlashAttribute("mensagem", "Verifique os campos!");
-				return "redirect:/cadastro";
-			}
-			pj.save(pessoaJuridica);
-			attributes.addFlashAttribute("mensagem", "Concluido");
-			return "redirect:/login";
-		}
+  @RequestMapping(value = "/cadastroPJ", method = RequestMethod.POST)
+  public String formPJ(@Valid PessoaJuridica pessoaJuridica, BindingResult result,
+      RedirectAttributes attributes) {
+    if (result.hasErrors()) {
+      attributes.addFlashAttribute("mensagem", "Verifique os campos!");
+      return "redirect:/cadastro";
+    }
+    pj.save(pessoaJuridica);
+    attributes.addFlashAttribute("mensagem", "Concluido");
+    return "redirect:/login";
+  }
 }

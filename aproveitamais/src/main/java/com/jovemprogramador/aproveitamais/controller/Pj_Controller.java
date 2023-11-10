@@ -1,6 +1,5 @@
 package com.jovemprogramador.aproveitamais.controller;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -17,20 +16,19 @@ import jakarta.validation.Valid;
 @Controller
 public class Pj_Controller {
 
+  @Autowired
+  private PessoaJuridicaRepository pj;
 
-	@Autowired
-	private PessoaJuridicaRepository pj;
-    
-	@RequestMapping(value = "/cadastroPJ", method = RequestMethod.POST)
-	public String formPJ(@Valid PessoaJuridica pessoaJuridica, BindingResult result,
-			RedirectAttributes attributes) {
-		if (result.hasErrors()) {
-			attributes.addFlashAttribute("mensagem", "Verifique os campos!");
-			return "redirect:/cadastro";
-		}
-		pj.save(pessoaJuridica);
-		attributes.addFlashAttribute("mensagem", "Empresa Cadastrada");
-		return "redirect:/login";
-	}
+  @RequestMapping(value = "/cadastroPJ", method = RequestMethod.POST)
+  public String formPJ(@Valid PessoaJuridica pessoaJuridica, BindingResult result,
+      RedirectAttributes attributes) {
+    if (result.hasErrors()) {
+      attributes.addFlashAttribute("mensagem", "Verifique os campos!");
+      return "redirect:/cadastro";
+    }
+    pj.save(pessoaJuridica);
+    attributes.addFlashAttribute("mensagem", "Empresa Cadastrada");
+    return "redirect:/login";
+  }
 
 }
