@@ -58,3 +58,6 @@ build/
 
 ### Eclipse ###
 .metadata/
+
+### Vs Code ###
+.vscode/
