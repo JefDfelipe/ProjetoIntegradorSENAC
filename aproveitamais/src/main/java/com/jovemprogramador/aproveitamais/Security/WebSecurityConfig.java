@@ -1,47 +1,52 @@
-package com.jovemprogramador.aproveitamais.security;
+// package com.jovemprogramador.aproveitamais.security;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
-import org.springframework.security.web.DefaultSecurityFilterChain;
+// import org.springframework.context.annotation.Bean;
+// import org.springframework.context.annotation.Configuration;
+// import org.springframework.http.HttpMethod;
+// import
+// org.springframework.security.config.annotation.web.builders.HttpSecurity;
+// import
+// org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+// import
+// org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+// import org.springframework.security.web.DefaultSecurityFilterChain;
 
-@Configuration
-@EnableWebSecurity
-public class WebSecurityConfig {
+// @Configuration
+// @EnableWebSecurity
+// public class WebSecurityConfig {
 
-  @Bean
-  public DefaultSecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+// @Bean
+// public DefaultSecurityFilterChain filterChain(HttpSecurity http) throws
+// Exception {
 
-    http
+// http
 
-        .csrf((csrf) -> csrf.disable())
+// .csrf((csrf) -> csrf.disable())
 
-        .authorizeHttpRequests((authz) -> authz
-            .requestMatchers(HttpMethod.GET, "/").permitAll()
-            .requestMatchers(HttpMethod.GET, "/cadastrarProdutos").hasRole("EMPRESA")
-            .requestMatchers(HttpMethod.POST, "/cadastrarProdutos").hasRole("EMPRESA")
-            .anyRequest().authenticated())
+// .authorizeHttpRequests((authz) -> authz
+// .requestMatchers(HttpMethod.GET, "/").permitAll()
+// .requestMatchers(HttpMethod.GET, "/cadastrarProdutos").hasRole("EMPRESA")
+// .requestMatchers(HttpMethod.POST, "/cadastrarProdutos").hasRole("EMPRESA")
+// .anyRequest().authenticated())
 
-        .formLogin((formLogin) -> formLogin
+// .formLogin((formLogin) -> formLogin
 
-            .loginPage("/login")
-            .defaultSuccessUrl("/minhaConta", true)
-            .permitAll())
+// .loginPage("/login")
+// .defaultSuccessUrl("/minhaConta", true)
+// .permitAll())
 
-        .logout((logout) -> logout
+// .logout((logout) -> logout
 
-            .logoutSuccessUrl("/")
-            .permitAll());
+// .logoutSuccessUrl("/")
+// .permitAll());
 
-    return http.build();
-  }
+// return http.build();
+// }
 
-  @Bean
-  public WebSecurityCustomizer webSecurityCustomizer() {
-    return (web) -> web.ignoring().requestMatchers("/fonts/**", "/images/**", "/js/**", "/scss/**", "/style/**");
-  }
+// @Bean
+// public WebSecurityCustomizer webSecurityCustomizer() {
+// return (web) -> web.ignoring().requestMatchers("/fonts/**", "/images/**",
+// "/js/**", "/scss/**", "/style/**");
+// }
 
-}
+// }

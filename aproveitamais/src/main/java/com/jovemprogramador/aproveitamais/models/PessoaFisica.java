@@ -1,9 +1,9 @@
 package com.jovemprogramador.aproveitamais.models;
 
-import java.util.Collection;
+// import java.util.Collection;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
+// import org.springframework.security.core.GrantedAuthority;
+// import org.springframework.security.core.userdetails.UserDetails;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,7 +18,8 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name = "pessoa_fisica")
-public class PessoaFisica implements UserDetails {
+// public class PessoaFisica implements UserDetails {
+public class PessoaFisica {
 
   private static final long serialVersionUID = 1L;
 
@@ -52,46 +53,47 @@ public class PessoaFisica implements UserDetails {
 
   // ----------------------------------------------------------------------\\
 
-  @Override
-  public Collection<? extends GrantedAuthority> getAuthorities() {
+  // @Override
+  // public Collection<? extends GrantedAuthority> getAuthorities() {
 
-    throw new UnsupportedOperationException("Unimplemented method 'getAuthorities'");
-  }
+  // throw new UnsupportedOperationException("Unimplemented method
+  // 'getAuthorities'");
+  // }
 
-  @Override
-  public String getPassword() {
+  // @Override
+  // public String getPassword() {
 
-    return this.getPassword();
-  }
+  // return this.getPassword();
+  // }
 
-  @Override
-  public String getUsername() {
+  // @Override
+  // public String getUsername() {
 
-    return this.getUsername();
-  }
+  // return this.getUsername();
+  // }
 
-  @Override
-  public boolean isAccountNonExpired() {
+  // @Override
+  // public boolean isAccountNonExpired() {
 
-    return true;
-  }
+  // return true;
+  // }
 
-  @Override
-  public boolean isAccountNonLocked() {
+  // @Override
+  // public boolean isAccountNonLocked() {
 
-    return true;
-  }
+  // return true;
+  // }
 
-  @Override
-  public boolean isCredentialsNonExpired() {
+  // @Override
+  // public boolean isCredentialsNonExpired() {
 
-    return true;
-  }
+  // return true;
+  // }
 
-  @Override
-  public boolean isEnabled() {
+  // @Override
+  // public boolean isEnabled() {
 
-    return true;
-  }
+  // return true;
+  // }
 
 }
