@@ -4,6 +4,9 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+ @import url(https://fonts.googleapis.com/css?family=Comfortaa:wght@500,regular,500,600,700);
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -13045,7 +13048,20 @@ button,
 
 .marquee {
   width: 100%;
-  offset: left;
+}
+
+div.row.marquee {
+  padding: 0px;
+  font-size: 100px;
+}
+
+.marquee-text {
+  font-size: 100%;
+  font-family: Comfortaa;
+}
+
+#section-counter {
+   padding: 0px;
 }
 
 .form-group label {
