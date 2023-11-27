@@ -31,7 +31,7 @@ public class PessoaFisica {
   @Column(nullable = false, unique = false)
   private String nomeCliente;
 
-  @NotBlank
+  // @NotBlank
   @Column(nullable = false, unique = true)
   private long CPF;
 
@@ -47,7 +47,7 @@ public class PessoaFisica {
   @Column(nullable = false, unique = false)
   private String telefone;
 
-  @NotBlank
+  // @NotBlank
   @Column(nullable = false, unique = true)
   private UUID codigoEndereco;
 
