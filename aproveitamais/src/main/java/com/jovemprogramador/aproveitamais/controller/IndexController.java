@@ -16,4 +16,24 @@ public class IndexController {
 		return "login";
 	}
 
+	@RequestMapping("/cadastro")
+	public String cadastro() {
+		return "home/cadastro";
+	}
+
+	@RequestMapping("/cart")
+	public String cart() {
+		return "home/cart";
+	}
+
+	@RequestMapping("/detalhesproduto")
+	public String detalhesproduto() {
+		return "home/detalhesproduto";
+	}
+
+	@RequestMapping("/checkout")
+	public String checkout() {
+		return "home/checkout";
+	}
+
 }
