@@ -25,11 +25,12 @@ public class Pf_Controller {
 
     if (result.hasErrors()) {
       attributes.addFlashAttribute("mensagem", "Verifique os campos!");
-      return "redirect:/home/cadastro";
+      return "redirect:/cadastro";
     }
+
     pf.save(pessoaFisica);
     attributes.addFlashAttribute("mensagem", "Concluido");
-    return "redirect:/home/login";
+    return "redirect:/cadastroendereco";
   }
 
 }

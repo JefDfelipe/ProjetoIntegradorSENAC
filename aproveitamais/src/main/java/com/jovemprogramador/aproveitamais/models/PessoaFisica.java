@@ -33,7 +33,7 @@ public class PessoaFisica {
 
   // @NotBlank
   @Column(nullable = false, unique = true)
-  private long CPF;
+  private long cpf;
 
   @NotBlank
   @Column(nullable = false, unique = true)
